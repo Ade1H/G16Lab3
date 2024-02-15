@@ -1,1 +1,7 @@
-<template><h1>Kontakt</h1></template>
+<template><h1>contact us</h1></template>
+
+
+
+<script>
+
+</script>
