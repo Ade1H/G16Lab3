@@ -8,4 +8,6 @@ defineProps({
 const count = ref(0)
 </script>
 
-<template></template>
+<template>
+  <h1>Elin</h1>
+</template>
