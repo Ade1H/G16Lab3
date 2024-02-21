@@ -8,13 +8,13 @@
 
 
 <footer
-        class="text-center text-lg-start text-white"
-        style="background-color: #1c2331 "
+        class="text-center text-lg-start text-black"
+        style="background-color: lightgray "
         >
   <!-- Section: Social media -->
   <section
-           class="d-flex justify-content-between p-4"
-           style="background-color: #6351ce  "
+           class="d-flex justify-content-between p-4 text-black "
+           style="background-color: rgba(255,240,5,1) "
            >
     <!-- Left -->
     <div class="me-5">
@@ -24,22 +24,22 @@
 
     <!-- Right -->
     <div>
-      <a href="" class="text-white me-4">
+      <a href="" class="text-black me-4">
         <i class="fab fa-facebook-f"></i>
       </a>
-      <a href="" class="text-white me-4">
+      <a href="" class="text-black me-4">
         <i class="fab fa-twitter"></i>
       </a>
-      <a href="" class="text-white me-4">
+      <a href="" class="text-black me-4">
         <i class="fab fa-google"></i>
       </a>
-      <a href="" class="text-white me-4">
+      <a href="" class="text-black me-4">
         <i class="fab fa-instagram"></i>
       </a>
-      <a href="" class="text-white me-4">
+      <a href="" class="text-black me-4">
         <i class="fab fa-linkedin"></i>
       </a>
-      <a href="" class="text-white me-4">
+      <a href="" class="text-black me-4">
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -77,16 +77,16 @@
               style="width: 60px; background-color: #7c4dff; height: 2px"
               />
           <p>
-            <a href="#!" class="text-white">MDBootstrap</a>
+            <a href="#!" class="text-black">MDBootstrap</a>
           </p>
           <p>
-            <a href="#!" class="text-white">MDWordPress</a>
+            <a href="#!" class="text-black">MDWordPress</a>
           </p>
           <p>
-            <a href="#!" class="text-white">BrandFlow</a>
+            <a href="#!" class="text-black">BrandFlow</a>
           </p>
           <p>
-            <a href="#!" class="text-white">Bootstrap Angular</a>
+            <a href="#!" class="text-black">Bootstrap Angular</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -100,16 +100,16 @@
               style="width: 60px; background-color: #7c4dff; height: 2px"
               />
           <p>
-            <a href="#!" class="text-white">Your Account</a>
+            <a href="#!" class="text-black">Your Account</a>
           </p>
           <p>
-            <a href="#!" class="text-white">Become an Affiliate</a>
+            <a href="#!" class="text-black">Become an Affiliate</a>
           </p>
           <p>
-            <a href="#!" class="text-white">Shipping Rates</a>
+            <a href="#!" class="text-black">Shipping Rates</a>
           </p>
           <p>
-            <a href="#!" class="text-white">Help</a>
+            <a href="#!" class="text-black">Help</a>
           </p>
         </div>
         <!-- Grid column -->

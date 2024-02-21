@@ -34,7 +34,7 @@
     </BNavbarNav>
     <BNavForm class="d-flex">
       <BFormInput class="me-2" placeholder="Search" />
-      <BButton type="submit" variant="outline-success">Search</BButton>
+      <BButton variant="outline-warning">Search</BButton>
     </BNavForm>
   </BCollapse>
 </BNavbar>
