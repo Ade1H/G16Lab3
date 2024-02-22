@@ -19,7 +19,8 @@ const store= usecounterStore()
 </script>
 
 <template>
-<main style="background:" >
+<main style="background: rgb(42,116,255);
+background: linear-gradient(180deg, rgba(42,116,255,1) 0%, rgba(185,248,255,1) 100%);" >
   <!-- <div class="navbar-dark bg-primary p-2 outo text-white"></div>
   <div class="navbar-dark bg-primary p-5 text-white bg-opacity-75"></div>
     <div class="navbar-dark bg-primary p-5 text-dark bg-opacity-50"></div>
@@ -27,7 +28,7 @@ const store= usecounterStore()
     <div class="navbar-dark bg-primary p-5 text-dark bg-opacity-10"></div> -->
 
     <div class="head" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
-    <div class="left" >
+    <div class="left" style="color: aliceblue;">
 
 
 
@@ -39,7 +40,7 @@ const store= usecounterStore()
     </div>
     <div class="right">
 
-      <img style="max-width: 300px; max-height: 300px; border-radius: 10px;"  src="../../assets/1.png" alt="student" >
+      <img style="max-width: 300px; max-height: 300px; border-radius: 10px;"  src="../assets/1.png" alt="student" >
     </div>
 
   </div>
@@ -56,7 +57,7 @@ const store= usecounterStore()
       <b-card-text>
         Some quick example text to build on the card title and make up the bulk of the card's content.
       </b-card-text>
-      <b-button href="#" variant="primary">Go somewhere</b-button>
+      <b-button href="#/Products" variant="primary">Read More</b-button>
       <!-- <b-button @click="store.increment1()"  >{{ store.value1 }}</b-button> -->
     </b-card>
   </div>
@@ -72,7 +73,8 @@ const store= usecounterStore()
       <b-card-text>
         Some quick example text to build on the card title and make up the bulk of the card's content.
       </b-card-text>
-      <b-button @click="store.increment1()"  >{{ store.value1 }}</b-button>
+      <b-button href="#/Products" variant="primary">Read More</b-button>
+      <!-- <b-button @click="store.increment1()"  >{{ store.value1 }}</b-button> -->
     </b-card>
   </div>
   <div>
@@ -87,20 +89,22 @@ const store= usecounterStore()
       <b-card-text>
         Some quick example text to build on the card title and make up the bulk of the card's content.
       </b-card-text>
-      <b-button @click="store.increment1()"  >{{ store.value1 }}</b-button>
+      <b-button href="#/Products" variant="primary">Read More</b-button>
+      <!-- <b-button @click="store.increment1()"  >{{ store.value1 }}</b-button> -->
     </b-card>
   </div>
-
+</div>
+<!--
      <div class="model">
       <img src="" alt="bild">
       <h2 >model</h2>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-      <!-- <button style="border: solid; padding: 3px; border-radius: 5px;" class="navbar-toggler" type="submit">order</button> -->
-     <input @click="store.increment1()" type="button" :value="store.value1"  />    <!-- man behöver inte alltid skriva parantes men vi gör det för att vi ska veta att det är en function* -->
-     </div>
+      <button style="border: solid; padding: 3px; border-radius: 5px;" class="navbar-toggler" type="submit">order</button> -->
+       <!-- <input @click="store.increment1()" type="button" :value="store.value1"  /> man behöver inte alltid skriva parantes men vi gör det för att vi ska veta att det är en function*
 
 
-<!--
+
+
     <div class="model">
       <img src="" alt="bild">
       <h2 >model</h2>
@@ -124,8 +128,8 @@ const store= usecounterStore()
       <h2 >model</h2>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
       <input @click="store.increment5" type="button" :value="store.value5"  />
-     </div> -->
-  </div >
+     </div>
+  </div > -->
 
 </main>
 <div >

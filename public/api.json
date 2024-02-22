@@ -1,0 +1,130 @@
+{
+    "courses": [
+      {
+        "title": "Web Development Bootcamp",
+        "image": "https://example.com/web_dev_bootcamp.jpg",
+        "description": "Comprehensive course covering HTML, CSS, JavaScript, and more.",
+        "price": "$99.99"
+      },
+      {
+        "title": "Python for Beginners",
+        "image": "https://example.com/python_beginners.jpg",
+        "description": "Learn Python programming language from scratch.",
+        "price": "$49.99"
+      },
+      {
+        "title": "Data Science Masterclass",
+        "image": "https://example.com/data_science_masterclass.jpg",
+        "description": "In-depth course on data analysis, machine learning, and statistics.",
+        "price": "$129.99"
+      },
+      {
+        "title": "Graphic Design Fundamentals",
+        "image": "https://example.com/graphic_design_fundamentals.jpg",
+        "description": "Explore the principles of graphic design and create stunning visuals.",
+        "price": "$79.99"
+      },
+      {
+        "title": "Mobile App Development",
+        "image": "https://example.com/mobile_app_development.jpg",
+        "description": "Build mobile applications for iOS and Android platforms.",
+        "price": "$109.99"
+      },
+      {
+        "title": "Photography Essentials",
+        "image": "https://example.com/photography_essentials.jpg",
+        "description": "Master the art of photography with practical exercises and techniques.",
+        "price": "$69.99"
+      },
+      {
+        "title": "Digital Marketing Crash Course",
+        "image": "https://example.com/digital_marketing_crash_course.jpg",
+        "description": "Learn the basics of digital marketing and strategies for online promotion.",
+        "price": "$59.99"
+      },
+      {
+        "title": "Artificial Intelligence Foundations",
+        "image": "https://example.com/ai_foundations.jpg",
+        "description": "Introduction to AI concepts, algorithms, and applications.",
+        "price": "$89.99"
+      },
+      {
+        "title": "Blockchain Essentials",
+        "image": "https://example.com/blockchain_essentials.jpg",
+        "description": "Understand blockchain technology and its real-world applications.",
+        "price": "$79.99"
+      },
+      {
+        "title": "UI/UX Design Principles",
+        "image": "https://example.com/ui_ux_design_principles.jpg",
+        "description": "Design intuitive user interfaces with a focus on user experience.",
+        "price": "$74.99"
+      },
+      {
+        "title": "Project Management Fundamentals",
+        "image": "https://example.com/project_management_fundamentals.jpg",
+        "description": "Learn essential project management skills and techniques.",
+        "price": "$99.99"
+      },
+      {
+        "title": "English Language Proficiency",
+        "image": "https://example.com/english_language_proficiency.jpg",
+        "description": "Improve your English language skills for academic and professional success.",
+        "price": "$39.99"
+      },
+      {
+        "title": "Cybersecurity Basics",
+        "image": "https://example.com/cybersecurity_basics.jpg",
+        "description": "Introduction to cybersecurity principles and best practices.",
+        "price": "$69.99"
+      },
+      {
+        "title": "Financial Planning for Beginners",
+        "image": "https://example.com/financial_planning_beginners.jpg",
+        "description": "Understand personal finance and create a solid financial plan.",
+        "price": "$49.99"
+      },
+      {
+        "title": "Game Development Fundamentals",
+        "image": "https://example.com/game_development_fundamentals.jpg",
+        "description": "Explore game development concepts and create your first game.",
+        "price": "$89.99"
+      },
+      {
+        "title": "Creative Writing Workshop",
+        "image": "https://example.com/creative_writing_workshop.jpg",
+        "description": "Unlock your creativity and master the art of storytelling.",
+        "price": "$59.99"
+      },
+      {
+        "title": "Networking Essentials",
+        "image": "https://example.com/networking_essentials.jpg",
+        "description": "Learn about computer networks, protocols, and security.",
+        "price": "$79.99"
+      },
+      {
+        "title": "Health and Fitness Mastery",
+        "image": "https://example.com/health_fitness_mastery.jpg",
+        "description": "Achieve your fitness goals with expert guidance and training plans.",
+        "price": "$49.99"
+      },
+      {
+        "title": "Music Production Techniques",
+        "image": "https://example.com/music_production_techniques.jpg",
+        "description": "Produce professional-quality music with industry-standard techniques.",
+        "price": "$109.99"
+      },
+      {
+        "title": "Interior Design Fundamentals",
+        "image": "https://example.com/interior_design_fundamentals.jpg",
+        "description": "Explore the principles of interior design and create beautiful spaces.",
+        "price": "$79.99"
+      },
+      {
+        "title": "Introduction to Yoga",
+        "image": "https://example.com/introduction_to_yoga.jpg",
+        "description": "Discover the benefits of yoga for physical and mental well-being.",
+        "price": "$29.99"
+      }
+    ]
+  }

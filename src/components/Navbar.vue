@@ -13,6 +13,7 @@
       <RouterLink class="nav-link"  to="/">Home</RouterLink>
       <RouterLink class="nav-link"  to="/contact">Contact</RouterLink>
       <RouterLink class="nav-link"  to="/about">About</RouterLink>
+      <RouterLink class="nav-link"  to="/products">Products</RouterLink>
 
     </BNavbarNav>
     <!-- Right aligned nav items -->
@@ -32,10 +33,9 @@
         <BDropdownItem href="#">Sign Out</BDropdownItem>
       </BNavItemDropdown>
     </BNavbarNav>
-    <BNavForm class="d-flex">
-      <BFormInput class="me-2" placeholder="Search" />
-      <BButton variant="outline-warning">Search</BButton>
-    </BNavForm>
+    
+   <SearchBar />
+
   </BCollapse>
 </BNavbar>
 
@@ -45,11 +45,13 @@
 <script>
 
 import { RouterLink } from 'vue-router';
+import SearchBar from './SearchBar.vue';
 
   export default {
 
     components: {
-    RouterLink
+    RouterLink,
+    SearchBar
   },
     data() {
       return {
