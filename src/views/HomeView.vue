@@ -8,6 +8,10 @@ const store= usecounterStore()
 <main style="background: rgb(42,116,255);
 background: linear-gradient(180deg, rgba(42,116,255,1) 0%, rgba(185,248,255,1) 100%);" >
 
+<BNavForm  class="d-flex">
+      <BFormInput  v-model="searchInApi" class="me-2" placeholder="Search" />
+      <BButton variant="outline-warning"  @click="searchResult()">Search</BButton>
+    </BNavForm>
     <div class="head" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
       <div class="container">
     <BCarousel class="arrow" controls indicators>
@@ -46,6 +50,9 @@ background: linear-gradient(180deg, rgba(42,116,255,1) 0%, rgba(185,248,255,1) 1
 
 
   </div>
+  <div class="button" style="display: flex; flex-direction: row;">
+   <ApiTakeDown />
+
   <div class="button">
   <div>
     <b-card
@@ -94,42 +101,7 @@ background: linear-gradient(180deg, rgba(42,116,255,1) 0%, rgba(185,248,255,1) 1
     </b-card>
   </div>
 </div>
-<!--
-     <div class="model">
-      <img src="" alt="bild">
-      <h2 >model</h2>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-      <button style="border: solid; padding: 3px; border-radius: 5px;" class="navbar-toggler" type="submit">order</button> -->
-       <!-- <input @click="store.increment1()" type="button" :value="store.value1"  /> man behöver inte alltid skriva parantes men vi gör det för att vi ska veta att det är en function*
 
-
-
-
-    <div class="model">
-      <img src="" alt="bild">
-      <h2 >model</h2>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-      <input @click="store.increment2" type="button" :value="store.value2"  />
-    </div>
-    <div class="model">
-      <img src="" alt="bild">
-      <h2 >model</h2>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-      <input @click="store.increment3" type="button" :value="store.value3"  />
-      </div>
-    <div class="model">
-      <img src="" alt="bild">
-      <h2 >model</h2>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-      <input @click="store.increment4" type="button" :value="store.value4"  />
-      </div>
-    <div class="model">
-      <img src="" alt="bild">
-      <h2 >model</h2>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-      <input @click="store.increment5" type="button" :value="store.value5"  />
-     </div>
-  </div > -->
 
 </main>
 <div >
@@ -141,7 +113,7 @@ background: linear-gradient(180deg, rgba(42,116,255,1) 0%, rgba(185,248,255,1) 1
 </template>
 
 
- <style>
+<style>
 .head{
   display:flex;
   height: 80vh;
@@ -149,8 +121,8 @@ background: linear-gradient(180deg, rgba(42,116,255,1) 0%, rgba(185,248,255,1) 1
 
 }
 .button{
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
 
 }
 

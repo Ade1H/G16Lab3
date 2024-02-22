@@ -10,6 +10,31 @@ const value = ref('search')
 </script>
 
 
+<template>
+<div  class="nav">
+  <input  v-model="searchInApi"  placeholder="search"  >
+
+  <p>{{toUpperCase}} </p>
+</div>
+<BButton @click="searchButton" size="sm" squared variant="outline-primary">{{ value }}</BButton>
+<!-- <BButton @click="searchButton" variant="primary">{{ value }}</BButton> -->
+<button @click="searchButton">search </button>
+  <div class="one">
+
+
+    <div class="tow"  v-for="wantedInfo in wanted  " @click="showM(wantedInfo)" >
+      <img  :src="wantedInfo.images[0].large" alt="Wantedimg" />
+      <p >{{ wantedInfo.title }} </p>
+
+      <p style="margin-top: 5px;">{{wantedInfo.subjects[0]}}</p>
+
+      <div style="color: white;" v-if="!wanted.length && searchInApi.length > 0">
+               No results found.
+      </div>
+    </div>
+
+  </div>
+</template>
 
 <script>
   import axios from 'axios'
@@ -26,40 +51,40 @@ const value = ref('search')
 
 
        methods: {
-      // async searchButton() {
-      //   try {
-      //     const result = await axios.get(`https://api.fbi.gov/wanted/v1/list?title=${this.toUpperCase} `)
-      //     this.wanted = result.data.items
-      //     console.log(result.data.items)
-      //   }catch (error) {
-      //     console.error('Error fetching data:', error)
-      //   }
-      // },
-      // showM(info){
-      //   this.$emit('show', info)
-      //   console.log(info)
-      // },
+      async searchButton() {
+        try {
+          const result = await axios.get(`https://api.fbi.gov/wanted/v1/list?title=${this.toUpperCase} `)
+          this.wanted = result.data.items
+          console.log(result.data.items)
+        }catch (error) {
+          console.error('Error fetching data:', error)
+        }
+      },
+      showM(info){
+        this.$emit('show', info)
+        console.log(info)
+      },
 
 
 
-      // },
-      // emits:['show'],
-      // computed:{
-      // toUpperCase(){
+      },
+      emits:['show'],
+      computed:{
+      toUpperCase(){
 
-      //   return this.searchInApi.toUpperCase()
+        return this.searchInApi.toUpperCase()
 
-      // }
-      // },
-      // watch:{
+      }
+      },
+      watch:{
 
-       },
+      },
       data() {
         return {
-          courses :[],
+          wanted :null,
           searchInApi:'',
           searchResult:[],
-          // uppercaseInput:''
+          uppercaseInput:''
         }
       }
     }

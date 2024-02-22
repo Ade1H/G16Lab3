@@ -34,7 +34,10 @@
       </BNavItemDropdown>
     </BNavbarNav>
 
-   <SearchBar />
+    <BNavForm class="d-flex">
+      <BFormInput v-model="searchInApi" class="me-2" placeholder="Search" />
+      <BButton variant="outline-warning"  @click="searchResult()">Search</BButton>
+    </BNavForm>
 
   </BCollapse>
 </BNavbar>
@@ -45,13 +48,13 @@
 <script>
 
 import { RouterLink } from 'vue-router';
-import SearchBar from './SearchBar.vue';
+
 
   export default {
 
     components: {
     RouterLink,
-    SearchBar
+
   },
     data() {
       return {
