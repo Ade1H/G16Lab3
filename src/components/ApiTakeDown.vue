@@ -100,8 +100,8 @@ const value = ref('search')
 <div style="color: white;" v-if="!courses.length && searchInApi.length >0">
                No results found.
       </div>
-      
-<div v-else>
+
+<!-- <div v-else>
     <b-card
       v-for="result in courses"
       :key="result.id"
@@ -124,8 +124,8 @@ const value = ref('search')
 
       <b-button variant="primary">add to card</b-button>
     </b-card>
-  </div>
-<div>
+  </div> -->
+<div style=": 400px; display: flex; " >
     <b-card
       v-for="cours in courses"
       :key="cours.id"
@@ -134,7 +134,7 @@ const value = ref('search')
       img-alt="Course Image"
 
       tag="article"
-      style="max-width: 20rem;"
+      style="max-width: 20rem; "
       class="mb-2"
     >
 
@@ -148,6 +148,7 @@ const value = ref('search')
 
       <b-button variant="primary">View Details</b-button>
     </b-card>
+
   </div>
   <div  class="nav">
     <!-- <input  v-model="searchInApi"  placeholder="search"  > -->

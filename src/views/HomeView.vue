@@ -1,9 +1,16 @@
 
 
-<script setup>
+<script >
+import ApiTakeDown from '../components/ApiTakeDown.vue';
+
+export default {
+    components: {
+      ApiTakeDown
+    }
+  }
 //  import { ref } from 'vue'
-import { usecounterStore } from '../store.js';
-const store= usecounterStore()
+// import { usecounterStore } from '../store.js';
+// const store= usecounterStore()
 
 /////vi ska använda pinia här ist
 
@@ -45,54 +52,8 @@ background: linear-gradient(180deg, rgba(42,116,255,1) 0%, rgba(185,248,255,1) 1
 
   </div>
   <div class="button">
-  <div>
-    <b-card
-      title="Card Title"
-      img-src="https://picsum.photos/600/300/?image=25"
-      img-alt="Image"
-      img-top
-      tag="article"
-      style="max-width: 20rem;"
-      class="mb-2">
-      <b-card-text>
-        Some quick example text to build on the card title and make up the bulk of the card's content.
-      </b-card-text>
-      <b-button href="#/Products" variant="primary">Read More</b-button>
-      <!-- <b-button @click="store.increment1()"  >{{ store.value1 }}</b-button> -->
-    </b-card>
-  </div>
-  <div>
-    <b-card
-      title="Card Title"
-      img-src="https://picsum.photos/600/300/?image=25"
-      img-alt="Image"
-      img-top
-      tag="article"
-      style="max-width: 20rem;"
-      class="mb-2">
-      <b-card-text>
-        Some quick example text to build on the card title and make up the bulk of the card's content.
-      </b-card-text>
-      <b-button href="#/Products" variant="primary">Read More</b-button>
-      <!-- <b-button @click="store.increment1()"  >{{ store.value1 }}</b-button> -->
-    </b-card>
-  </div>
-  <div>
-    <b-card
-      title="Card Title"
-      img-src="https://picsum.photos/600/300/?image=25"
-      img-alt="Image"
-      img-top
-      tag="article"
-      style="max-width: 20rem;"
-      class="mb-2">
-      <b-card-text>
-        Some quick example text to build on the card title and make up the bulk of the card's content.
-      </b-card-text>
-      <b-button href="#/Products" variant="primary">Read More</b-button>
-      <!-- <b-button @click="store.increment1()"  >{{ store.value1 }}</b-button> -->
-    </b-card>
-  </div>
+   <ApiTakeDown />
+
 </div>
 <!--
      <div class="model">
