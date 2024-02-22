@@ -2,97 +2,83 @@
 <template>
 
 
-<!--Navbar-->
-<nav class="navbar navbar-light navbar-1 white">
-
-<!-- Navbar brand -->
-<a class="navbar-brand" href="#">Navbar</a>
-
-<!-- Collapse button -->
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
-  aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-
-<!-- Collapsible content -->
-<div class="collapse navbar-collapse" id="navbarSupportedContent15">
-
-  <!-- Links -->
-  <ul class="navbar-nav mr-auto">
-    <li class="nav-item active">
-      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Features</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Pricing</a>
-    </li>
-  </ul>
+<BNavbar toggleable="lg" variant="primary" v-b-color-mode="'dark'">
 
 
-  <!-- Links -->
+  <!-- <BNavbarBrand href="#">NavBar</BNavbarBrand> -->
 
-</div>
-<!-- Collapsible content -->
+  <BNavbarToggle target="nav-collapse" />
+  <BCollapse id="nav-collapse" is-nav>
+    <BNavbarNav>
+      <RouterLink class="nav-link"  to="/">Home</RouterLink>
+      <RouterLink class="nav-link"  to="/contact">Contact</RouterLink>
+      <RouterLink class="nav-link"  to="/about">About</RouterLink>
+      <RouterLink class="nav-link"  to="/products">Products</RouterLink>
 
-</nav>
-<!--/.Navbar-->
+    </BNavbarNav>
+    <!-- Right aligned nav items -->
+    <BNavbarNav class="ms-auto mb-2 mb-lg-0">
+      <BNavItemDropdown text="Lang" right>
+        <BDropdownItem href="#">EN</BDropdownItem>
+        <BDropdownItem href="#">ES</BDropdownItem>
+        <BDropdownItem href="#">RU</BDropdownItem>
+        <BDropdownItem href="#">FA</BDropdownItem>
+      </BNavItemDropdown>
+      <BNavItemDropdown right>
+        <!-- Using 'button-content' slot -->
+        <template #button-content>
+          <em>User</em>
+        </template>
+        <BDropdownItem href="#">Profile</BDropdownItem>
+        <BDropdownItem href="#">Sign Out</BDropdownItem>
+      </BNavItemDropdown>
+    </BNavbarNav>
+    
+   <SearchBar />
 
+  </BCollapse>
+</BNavbar>
 
-<p v-if="ifMenuClicked === false" @click="menuClick"></p>
-  <!-- <img s-else src="/assets/hMenu.jpg" @click="menuClick"> -->
-
-  <nav v-show="ifMenuClicked">
-    <ul style="color: aliceblue;">
-      <li>
-        <RouterLink style="color: azure" to="/">Hem</RouterLink>
-      </li>
-      <!-- <li>
-        <RouterLink style="color: azure;" to="/about">Om</RouterLink> -->
-      <!-- </li> -->
-      <li>
-        <RouterLink style="color: azure" to="/contact">Kontakt</RouterLink>
-      </li>
-    </ul>
-  </nav>
 </template>
 
 
 <script>
 
+import { RouterLink } from 'vue-router';
+import SearchBar from './SearchBar.vue';
 
   export default {
 
-
+    components: {
+    RouterLink,
+    SearchBar
+  },
     data() {
       return {
 
-       menuText:"Menu",
+      // menuText:"Menu",
        ifMenuClicked:false,
       }
     },
     methods:{
       menuClick(){
+        console.log("menu clicked "+this.ifMenuClicked)
         this.ifMenuClicked = !this.ifMenuClicked
-        this.menuText = this.ifMenuClicked ? "X" :"Menu"
+        console.log("menu clicked "+this.ifMenuClicked)
+
+
+        // this.menuText = this.ifMenuClicked ? "X" :"Menu"
       }
     }
   }
 </script>
 
 
-
 <style scoped>
+div{
+  height: 10vh;
 
-/* nav{
-  display: flex;
-  flex-direction: row;
-} */
+}
 
-
-
-  /* img{
-    max-width: 30px;
-
-  } */
 
 </style>
