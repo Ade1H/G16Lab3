@@ -11,21 +11,22 @@
 
     <label>Role:</label>
     <select v-model="role">
-      <option value="developer">agent</option>
-      <option value="designer">user</option>
+      <option value="designer">Logg in </option>
+      <option value="developer">new user register</option>
+
     </select>
 
     <div class="terms" >
       <input type="checkbox" v-model="terms" required name="" id="">
       <label>Accept Terms And conditions</label>
     </div>
-    <p>Email:{{ email }}</p>
+    <!-- <p>Email:{{ email }}</p>
     <p>Password:{{ password }}</p>
     <p>Role:{{ role }}</p>
-    <p>Terms:{{ terms }}</p>
+    <p>Terms:{{ terms }}</p> -->
 
     <div class="submit">
-      <button>Create acount</button>
+      <button>Logg in/Create acount</button>
     </div>
   </form>
 </main>
