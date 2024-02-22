@@ -7,11 +7,6 @@ const store= usecounterStore()
 <template>
 <main style="background: rgb(42,116,255);
 background: linear-gradient(180deg, rgba(42,116,255,1) 0%, rgba(185,248,255,1) 100%);" >
-  <!-- <div class="navbar-dark bg-primary p-2 outo text-white"></div>
-  <div class="navbar-dark bg-primary p-5 text-white bg-opacity-75"></div>
-    <div class="navbar-dark bg-primary p-5 text-dark bg-opacity-50"></div>
-    <div class="navbar-dark bg-primary p-5 text-dark bg-opacity-25"></div>
-    <div class="navbar-dark bg-primary p-5 text-dark bg-opacity-10"></div> -->
 
     <div class="head" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
       <div class="container">
@@ -150,16 +145,12 @@ background: linear-gradient(180deg, rgba(42,116,255,1) 0%, rgba(185,248,255,1) 1
 .head{
   display:flex;
   height: 80vh;
-  justify-content: space-between; /* Align items with space between them */
-  /*align-items: center; Vertically center items */
-
+  justify-content: space-between;
 
 }
 .button{
   display: flex;
   justify-content: space-between;
-
-
 
 }
 

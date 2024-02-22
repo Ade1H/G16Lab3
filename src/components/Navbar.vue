@@ -5,7 +5,7 @@
 <BNavbar toggleable="lg" variant="primary" v-b-color-mode="'dark'">
 
 
-  <!-- <BNavbarBrand href="#">NavBar</BNavbarBrand> -->
+  <BNavbarBrand href="#">Eduwill</BNavbarBrand>
 
   <BNavbarToggle target="nav-collapse" />
   <BCollapse id="nav-collapse" is-nav>
@@ -33,7 +33,7 @@
         <BDropdownItem href="#">Sign Out</BDropdownItem>
       </BNavItemDropdown>
     </BNavbarNav>
-    
+
    <SearchBar />
 
   </BCollapse>

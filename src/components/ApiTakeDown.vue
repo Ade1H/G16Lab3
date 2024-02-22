@@ -1,4 +1,6 @@
-  <script setup>
+
+
+ <script setup>
   import { ref } from 'vue'
 
 const value = ref('search')
@@ -61,7 +63,7 @@ const value = ref('search')
         }
       }
     }
-
+;
 </script>
 
 <template>
