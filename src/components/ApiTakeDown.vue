@@ -125,7 +125,7 @@ const value = ref('search')
       <b-button variant="primary">add to card</b-button>
     </b-card>
   </div> -->
-<div style=": 400px; display: flex; " >
+<div style=" display: flex; flex-wrap:wrap; " >
     <b-card
       v-for="cours in courses"
       :key="cours.id"
@@ -134,7 +134,7 @@ const value = ref('search')
       img-alt="Course Image"
 
       tag="article"
-      style="max-width: 20rem; "
+      style="max-width: 20rem; margin: 10px; "
       class="mb-2"
     >
 

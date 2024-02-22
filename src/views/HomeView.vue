@@ -26,13 +26,14 @@ export default {
 </script>
 
 <template>
+  <BNavForm class="d-flex">
+      <BFormInput v-model="searchInApi" class="me-2" placeholder="Search" />
+      <BButton variant="outline-warning"  @click="searchResult()">Search</BButton>
+    </BNavForm>
+
 <main style="background: rgb(42,116,255);
 background: linear-gradient(180deg, rgba(42,116,255,1) 0%, rgba(185,248,255,1) 100%);" >
-  <!-- <div class="navbar-dark bg-primary p-2 outo text-white"></div>
-  <div class="navbar-dark bg-primary p-5 text-white bg-opacity-75"></div>
-    <div class="navbar-dark bg-primary p-5 text-dark bg-opacity-50"></div>
-    <div class="navbar-dark bg-primary p-5 text-dark bg-opacity-25"></div>
-    <div class="navbar-dark bg-primary p-5 text-dark bg-opacity-10"></div> -->
+
 
     <div class="head" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
     <div class="left" style="color: aliceblue;">
@@ -51,7 +52,7 @@ background: linear-gradient(180deg, rgba(42,116,255,1) 0%, rgba(185,248,255,1) 1
     </div>
 
   </div>
-  <div class="button">
+  <div class="button" style="display: flex; flex-direction: row;">
    <ApiTakeDown />
 
 </div>
@@ -112,8 +113,8 @@ background: linear-gradient(180deg, rgba(42,116,255,1) 0%, rgba(185,248,255,1) 1
 
 }
 .button{
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
 
 
 
