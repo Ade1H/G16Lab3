@@ -58,8 +58,6 @@ import { RouterLink } from 'vue-router';
   },
     data() {
       return {
-
-      // menuText:"Menu",
        ifMenuClicked:false,
       }
     },
@@ -68,9 +66,6 @@ import { RouterLink } from 'vue-router';
         console.log("menu clicked "+this.ifMenuClicked)
         this.ifMenuClicked = !this.ifMenuClicked
         console.log("menu clicked "+this.ifMenuClicked)
-
-
-        // this.menuText = this.ifMenuClicked ? "X" :"Menu"
       }
     }
   }

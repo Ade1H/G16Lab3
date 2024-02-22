@@ -1,147 +1,80 @@
-<script setup>
-import { usecounterStore } from '../store.js';
-const store= usecounterStore()
+<script>
+import ApiTakeDown from "../components/ApiTakeDown.vue";
+import CarouselSlide from '../components/CarouselSlide.vue';
+
+
+export default {
+  components: {
+    ApiTakeDown,
+    CarouselSlide
+  },
+};
 </script>
 
-
 <template>
-<main style="background: rgb(42,116,255);
-background: linear-gradient(180deg, rgba(42,116,255,1) 0%, rgba(185,248,255,1) 100%);" >
-
-<BNavForm  class="d-flex">
-      <BFormInput  v-model="searchInApi" class="me-2" placeholder="Search" />
-      <BButton variant="outline-warning"  @click="searchResult()">Search</BButton>
-    </BNavForm>
-    <div class="head" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
-      <div class="container">
-    <BCarousel class="arrow" controls indicators>
-      <BCarouselSlide
-        img-src="https://img-c.udemycdn.com/notices/featured_carousel_slide/image/542775ce-985d-4103-8f86-1bfc28afb29d.jpg">
-        <div class="card-intro">
-          <h4>Don’t just browse the web — design it</h4>
-          <p>
-            Learn web design, from user experience fundamentals to graphic
-            design.
-          </p>
-        </div>
-      </BCarouselSlide>
-      <BCarouselSlide
-        img-src="https://img-c.udemycdn.com/notices/web_carousel_slide/image/203e3c26-c085-48cb-aec0-8ccbe82be2b8.jpg">
-        <div class="card-intro">
-          <h4>Learning for all</h4>
-          <p>
-            Thousands of courses to help you succeed in your goals — at work and
-            in life. Starting at €12.99 through Feb 22.
-          </p>
-        </div>
-      </BCarouselSlide>
-      <BCarouselSlide
-        img-src="https://img-c.udemycdn.com/notices/featured_carousel_slide/image/65540944-d2e5-4e12-af78-ce1a2c691aeb.jpg">
-        <div class="card-intro">
-          <h4>A broad selection of courses</h4>
-          <p>
-            Choose from over 210,000 online video courses with new additions
-            published every month
-          </p>
-        </div>
-      </BCarouselSlide>
-    </BCarousel>
-  </div>
-
-
-  </div>
-  <div class="button" style="display: flex; flex-direction: row;">
-   <ApiTakeDown />
-
-  <div class="button">
-  <div>
-    <b-card
-      title="Card Title"
-      img-src="https://picsum.photos/600/300/?image=25"
-      img-alt="Image"
-      img-top
-      tag="article"
-      style="max-width: 20rem;"
-      class="mb-2">
-      <b-card-text>
-        Some quick example text to build on the card title and make up the bulk of the card's content.
-      </b-card-text>
-      <b-button href="#/Products" variant="primary">Read More</b-button>
-    </b-card>
-  </div>
-  <div>
-    <b-card
-      title="Card Title"
-      img-src="https://picsum.photos/600/300/?image=25"
-      img-alt="Image"
-      img-top
-      tag="article"
-      style="max-width: 20rem;"
-      class="mb-2">
-      <b-card-text>
-        Some quick example text to build on the card title and make up the bulk of the card's content.
-      </b-card-text>
-      <b-button href="#/Products" variant="primary">Read More</b-button>
-    </b-card>
-  </div>
-  <div>
-    <b-card
-      title="Card Title"
-      img-src="https://picsum.photos/600/300/?image=25"
-      img-alt="Image"
-      img-top
-      tag="article"
-      style="max-width: 20rem;"
-      class="mb-2">
-      <b-card-text>
-        Some quick example text to build on the card title and make up the bulk of the card's content.
-      </b-card-text>
-      <b-button href="#/Products" variant="primary">Read More</b-button>
-
-    </b-card>
-  </div>
-</div>
-
-
-</main>
-<div >
-
-<!-- Footer -->
-
-
-</div>
+  <main
+    style="
+      background: rgb(95, 96, 97);
+      background: linear-gradient(
+        180deg,
+        rgb(253, 254, 254) 0%,
+        rgb(253, 255, 255) 100%
+      );
+    ">
+    <div class="container">
+      <BCarousel controls indicators>
+        <BCarouselSlide
+          img-src="https://img-c.udemycdn.com/notices/featured_carousel_slide/image/542775ce-985d-4103-8f86-1bfc28afb29d.jpg">
+          <div class="card-intro">
+            <h4>Don’t just browse the web — design it</h4>
+            <p>
+              Learn web design, from user experience fundamentals to graphic
+              design.
+            </p>
+          </div>
+        </BCarouselSlide>
+        <BCarouselSlide
+          img-src="https://img-c.udemycdn.com/notices/web_carousel_slide/image/203e3c26-c085-48cb-aec0-8ccbe82be2b8.jpg">
+          <div class="card-intro">
+            <h4>Learning for all</h4>
+            <p>
+              Thousands of courses to help you succeed in your goals — at work
+              and in life. Starting at €12.99 through Feb 22.
+            </p>
+          </div>
+        </BCarouselSlide>
+        <BCarouselSlide
+          img-src="https://img-c.udemycdn.com/notices/featured_carousel_slide/image/65540944-d2e5-4e12-af78-ce1a2c691aeb.jpg">
+          <div class="card-intro">
+            <h4>A broad selection of courses</h4>
+            <p>
+              Choose from over 210,000 online video courses with new additions
+              published every month
+            </p>
+          </div>
+        </BCarouselSlide>
+      </BCarousel>
+    </div>
+    <div>
+      <p class="discription">
+        Online courses offer flexible and accessible learning opportunities for
+        everyone. With a diverse range of subjects, from technology and business
+        to arts and personal development, they can be taken anytime, anywhere.
+        High-quality content, interactive materials, and opportunities for
+        discussion create dynamic learning environments.
+      </p>
+      <br />
+    </div>
+    <!-- <div class="cards">
+      <ApiTakeDown />
+    </div> -->
+    <div>
+      <CarouselSlide/>
+    </div>
+  </main>
 </template>
 
-
-<style>
-.head{
-  display:flex;
-  height: 80vh;
-  justify-content: space-between;
-
-}
-.button{
-  /* display: flex;
-  justify-content: space-between; */
-
-}
-
-.model{
-
-  border: solid blue;
-  max-width: 100px;
-  padding: 5px;
-  border-radius: 5px;
-  margin: 5px;
-}
-
-
-.foot{
-
-  background-color: blueviolet;
-  height: 20vh;
-}
-
+<style scoped>
 * {
   margin: 0px;
   box-sizing: border-box;
@@ -164,7 +97,17 @@ p {
   padding-right: 25rem;
   padding-bottom: 8rem;
 }
-.container{
-  margin-bottom: 15px;
+.container {
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+.cards {
+  align-items: center;
+  margin-left: 35px;
+}
+
+.discription {
+  text-align: center;
+  padding: 30px;
 }
 </style>
