@@ -1,22 +1,8 @@
-
-
 <script setup>
-//  import { ref } from 'vue'
 import { usecounterStore } from '../store.js';
 const store= usecounterStore()
-
-/////vi ska använda pinia här ist
-
-// const value = ref(0)
-
-// function increment() {
-//   value.value++
-// }
-
-
-
-
 </script>
+
 
 <template>
 <main style="background: rgb(42,116,255);
@@ -79,7 +65,6 @@ background: linear-gradient(180deg, rgba(42,116,255,1) 0%, rgba(185,248,255,1) 1
         Some quick example text to build on the card title and make up the bulk of the card's content.
       </b-card-text>
       <b-button href="#/Products" variant="primary">Read More</b-button>
-      <!-- <b-button @click="store.increment1()"  >{{ store.value1 }}</b-button> -->
     </b-card>
   </div>
   <div>
@@ -95,7 +80,6 @@ background: linear-gradient(180deg, rgba(42,116,255,1) 0%, rgba(185,248,255,1) 1
         Some quick example text to build on the card title and make up the bulk of the card's content.
       </b-card-text>
       <b-button href="#/Products" variant="primary">Read More</b-button>
-      <!-- <b-button @click="store.increment1()"  >{{ store.value1 }}</b-button> -->
     </b-card>
   </div>
   <div>
@@ -111,7 +95,7 @@ background: linear-gradient(180deg, rgba(42,116,255,1) 0%, rgba(185,248,255,1) 1
         Some quick example text to build on the card title and make up the bulk of the card's content.
       </b-card-text>
       <b-button href="#/Products" variant="primary">Read More</b-button>
-      <!-- <b-button @click="store.increment1()"  >{{ store.value1 }}</b-button> -->
+
     </b-card>
   </div>
 </div>
@@ -193,5 +177,31 @@ background: linear-gradient(180deg, rgba(42,116,255,1) 0%, rgba(185,248,255,1) 1
 
   background-color: blueviolet;
   height: 20vh;
+}
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  padding: 0%;
+}
+h4 {
+  color: #111;
+  font-family: sans-serif;
+}
+
+p {
+  color: #111;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 29px;
+  font-size: larger;
+  display: block;
+}
+.card-intro {
+  display: block;
+  padding-right: 25rem;
+  padding-bottom: 8rem;
+}
+.container{
+  margin-bottom: 15px;
 }
 </style>

@@ -1,8 +1,5 @@
-
-
   <script setup>
   import { ref } from 'vue'
-
 
 const value = ref('search')
   function increment() {
@@ -13,9 +10,6 @@ const value = ref('search')
 
 
 <script>
-
-
-
   import axios from 'axios'
 
     export default {
@@ -24,23 +18,11 @@ const value = ref('search')
         //axios
         axios('/api.json').then((result)=>{
             this.courses = result.data.courses
-            // this.imageS=result.data.items.images.large
-
             console.log(result)
         })
-          // .then((response) => response.json())
-          // .then((result) => {
-          //   this.cities = result
-          // })
       },
 
-      // methods:{
-      //   showM(info){
-      //     this.$emit('show', info)
-      //     console.log(info)
-      //   }
 
-      // },
        methods: {
       // async searchButton() {
       //   try {
@@ -138,5 +120,5 @@ const value = ref('search')
       </div>
 
     </div>
-  
+
   </template>
