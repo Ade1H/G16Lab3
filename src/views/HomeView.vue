@@ -28,41 +28,20 @@ background: linear-gradient(180deg, rgba(42,116,255,1) 0%, rgba(185,248,255,1) 1
     <div class="navbar-dark bg-primary p-5 text-dark bg-opacity-10"></div> -->
 
     <div class="head" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
-      <div class="container">
-    <BCarousel class="arrow" controls indicators>
-      <BCarouselSlide
-        img-src="https://img-c.udemycdn.com/notices/featured_carousel_slide/image/542775ce-985d-4103-8f86-1bfc28afb29d.jpg">
-        <div class="card-intro">
-          <h4>Don’t just browse the web — design it</h4>
-          <p>
-            Learn web design, from user experience fundamentals to graphic
-            design.
-          </p>
-        </div>
-      </BCarouselSlide>
-      <BCarouselSlide
-        img-src="https://img-c.udemycdn.com/notices/web_carousel_slide/image/203e3c26-c085-48cb-aec0-8ccbe82be2b8.jpg">
-        <div class="card-intro">
-          <h4>Learning for all</h4>
-          <p>
-            Thousands of courses to help you succeed in your goals — at work and
-            in life. Starting at €12.99 through Feb 22.
-          </p>
-        </div>
-      </BCarouselSlide>
-      <BCarouselSlide
-        img-src="https://img-c.udemycdn.com/notices/featured_carousel_slide/image/65540944-d2e5-4e12-af78-ce1a2c691aeb.jpg">
-        <div class="card-intro">
-          <h4>A broad selection of courses</h4>
-          <p>
-            Choose from over 210,000 online video courses with new additions
-            published every month
-          </p>
-        </div>
-      </BCarouselSlide>
-    </BCarousel>
-  </div>
+    <div class="left" style="color: aliceblue;">
 
+
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eaque laborum, deserunt, atque velit iusto accusamus pariatur dolorem molestiae porro cupiditate non deleniti perspiciatis nam ipsam! Ad fuga eos vel!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eaque laborum, deserunt, atque velit iusto accusamus pariatur dolorem molestiae porro cupiditate non deleniti perspiciatis nam ipsam! Ad fuga eos vel!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eaque laborum, deserunt, atque velit iusto accusamus pariatur dolorem molestiae porro cupiditate non deleniti perspiciatis nam ipsam! Ad fuga eos vel!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eaque laborum, deserunt, atque velit iusto accusamus pariatur dolorem molestiae porro cupiditate non deleniti perspiciatis nam ipsam! Ad fuga eos vel!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eaque laborum, deserunt, atque velit iusto accusamus pariatur dolorem molestiae porro cupiditate non deleniti perspiciatis nam ipsam! Ad fuga eos vel!</p>
+    </div>
+    <div class="right">
+
+      <img style="max-width: 300px; max-height: 300px; border-radius: 10px;"  src="../assets/1.png" alt="student" >
+    </div>
 
   </div>
   <div class="button">

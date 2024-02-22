@@ -33,7 +33,21 @@ const value = ref('search')
           //   this.cities = result
           // })
       },
+      method:{
+      async searchResult() {
+        try {
+          const result = await axios.get(`/api.json/${this.searchInApi} `)
+          this.courses = result.data.courses
+          console.log(result)
+          console.log(this.searchInApi)
 
+        }catch (error) {
+          console.error('Error fetching data:', error)
+        }
+
+
+      }
+    },
       // methods:{
       //   showM(info){
       //     this.$emit('show', info)
@@ -83,7 +97,34 @@ const value = ref('search')
 </script>
 
 <template>
+<div style="color: white;" v-if="!courses.length && searchInApi.length >0">
+               No results found.
+      </div>
+      
+<div v-else>
+    <b-card
+      v-for="result in courses"
+      :key="result.id"
+      :title="result.title"
+      :img-src="result.image"
+      img-alt="Course Image"
 
+      tag="article"
+      style="max-width: 20rem;"
+      class="mb-2"
+    >
+
+      <b-card-text>
+        {{ result.description }}
+      </b-card-text>
+
+      <b-card-text>
+        Price: {{ result.price }}
+      </b-card-text>
+
+      <b-button variant="primary">add to card</b-button>
+    </b-card>
+  </div>
 <div>
     <b-card
       v-for="cours in courses"
@@ -138,5 +179,5 @@ const value = ref('search')
       </div>
 
     </div>
-  
+
   </template>
