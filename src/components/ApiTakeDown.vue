@@ -1,28 +1,26 @@
-
-
-  <script setup>
-  import { ref } from 'vue'
-
+<script setup>
+import { ref } from 'vue'
+import axios from 'axios'
 
 const value = ref('search')
-  function increment() {
-    value.value++
-  }
+function increment() {
+  value.value++
+}
 </script>
 
-
-<<<<<<< HEAD
+<script>
+import { ref } from 'vue'
 export default {
   created() {
     axios("/api.json").then((result) => {
-      this.courses = result.data.courses;
+      this.courses = result.data.courses; // Incorrect usage of 'this' here
       console.log(result);
     });
   },
-  method: {
+  methods: { // Corrected 'methods' spelling
     async searchResult() {
       try {
-        const result = await axios.get(`/api.json/${this.searchInApi} `);
+        const result = await axios.get(`/api.json/${this.searchInApi}`);
         this.courses = result.data.courses;
         console.log(result);
         console.log(this.searchInApi);
@@ -36,53 +34,9 @@ export default {
       courses: [],
       searchInApi: "",
       searchResult: [],
-      // uppercaseInput:''
     };
   },
 };
-=======
-
-<script>
-
-
-
-  import axios from 'axios'
-
-    export default {
-
-      created() {
-        //axios
-        axios('/api.json').then((result)=>{
-            this.courses = result.data.courses
-            // this.imageS=result.data.items.images.large
-
-            console.log(result)
-        })
-          // .then((response) => response.json())
-          // .then((result) => {
-          //   this.cities = result
-          // })
-      },
-
-      // methods:{
-      //   showM(info){
-      //     this.$emit('show', info)
-      //     console.log(info)
-      //   }
-
-      // },
-
-      data() {
-        return {
-          courses :[],
-          searchInApi:'',
-          searchResult:[],
-          // uppercaseInput:''
-        }
-      }
-    }
-
->>>>>>> AdelsB
 </script>
 
 <template>
