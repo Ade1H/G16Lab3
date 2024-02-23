@@ -1,138 +1,114 @@
+<script>
+import ApiTakeDown from "../components/ApiTakeDown.vue";
+import CarouselSlide from '../components/CarouselSlide.vue';
 
-
-<script >
-import ApiTakeDown from '../components/ApiTakeDown.vue';
 
 export default {
-    components: {
-      ApiTakeDown
-    }
-  }
-//  import { ref } from 'vue'
-// import { usecounterStore } from '../store.js';
-// const store= usecounterStore()
-
-/////vi ska använda pinia här ist
-
-// const value = ref(0)
-
-// function increment() {
-//   value.value++
-// }
-
-
-
-
+  components: {
+    ApiTakeDown,
+    CarouselSlide
+  },
+};
 </script>
 
 <template>
-  <BNavForm class="d-flex">
-      <BFormInput v-model="searchInApi" class="me-2" placeholder="Search" />
-      <BButton variant="outline-warning"  @click="searchResult()">Search</BButton>
-    </BNavForm>
-
-<main style="background: rgb(42,116,255);
-background: linear-gradient(180deg, rgba(42,116,255,1) 0%, rgba(185,248,255,1) 100%);" >
-
-
-    <div class="head" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
-    <div class="left" style="color: aliceblue;">
-
-
-
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eaque laborum, deserunt, atque velit iusto accusamus pariatur dolorem molestiae porro cupiditate non deleniti perspiciatis nam ipsam! Ad fuga eos vel!</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eaque laborum, deserunt, atque velit iusto accusamus pariatur dolorem molestiae porro cupiditate non deleniti perspiciatis nam ipsam! Ad fuga eos vel!</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eaque laborum, deserunt, atque velit iusto accusamus pariatur dolorem molestiae porro cupiditate non deleniti perspiciatis nam ipsam! Ad fuga eos vel!</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eaque laborum, deserunt, atque velit iusto accusamus pariatur dolorem molestiae porro cupiditate non deleniti perspiciatis nam ipsam! Ad fuga eos vel!</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eaque laborum, deserunt, atque velit iusto accusamus pariatur dolorem molestiae porro cupiditate non deleniti perspiciatis nam ipsam! Ad fuga eos vel!</p>
+  <main
+    style="
+      background: rgb(95, 96, 97);
+      background: linear-gradient(
+        180deg,
+        rgb(253, 254, 254) 0%,
+        rgb(253, 255, 255) 100%
+      );
+    ">
+    <div class="container">
+      <BCarousel controls indicators>
+        <BCarouselSlide
+          img-src="https://img-c.udemycdn.com/notices/featured_carousel_slide/image/542775ce-985d-4103-8f86-1bfc28afb29d.jpg">
+          <div class="card-intro">
+            <h4>Don’t just browse the web — design it</h4>
+            <p>
+              Learn web design, from user experience fundamentals to graphic
+              design.
+            </p>
+          </div>
+        </BCarouselSlide>
+        <BCarouselSlide
+          img-src="https://img-c.udemycdn.com/notices/web_carousel_slide/image/203e3c26-c085-48cb-aec0-8ccbe82be2b8.jpg">
+          <div class="card-intro">
+            <h4>Learning for all</h4>
+            <p>
+              Thousands of courses to help you succeed in your goals — at work
+              and in life. Starting at €12.99 through Feb 22.
+            </p>
+          </div>
+        </BCarouselSlide>
+        <BCarouselSlide
+          img-src="https://img-c.udemycdn.com/notices/featured_carousel_slide/image/65540944-d2e5-4e12-af78-ce1a2c691aeb.jpg">
+          <div class="card-intro">
+            <h4>A broad selection of courses</h4>
+            <p>
+              Choose from over 210,000 online video courses with new additions
+              published every month
+            </p>
+          </div>
+        </BCarouselSlide>
+      </BCarousel>
     </div>
-    <div class="right">
-
-      <img style="max-width: 300px; max-height: 300px; border-radius: 10px;"  src="../assets/1.png" alt="student" >
+    <div>
+      <p class="discription">
+        Online courses offer flexible and accessible learning opportunities for
+        everyone. With a diverse range of subjects, from technology and business
+        to arts and personal development, they can be taken anytime, anywhere.
+        High-quality content, interactive materials, and opportunities for
+        discussion create dynamic learning environments.
+      </p>
+      <br />
     </div>
-
-  </div>
-  <div class="button" style="display: flex; flex-direction: row;">
-   <ApiTakeDown />
-
-</div>
-<!--
-     <div class="model">
-      <img src="" alt="bild">
-      <h2 >model</h2>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-      <button style="border: solid; padding: 3px; border-radius: 5px;" class="navbar-toggler" type="submit">order</button> -->
-       <!-- <input @click="store.increment1()" type="button" :value="store.value1"  /> man behöver inte alltid skriva parantes men vi gör det för att vi ska veta att det är en function*
-
-
-
-
-    <div class="model">
-      <img src="" alt="bild">
-      <h2 >model</h2>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-      <input @click="store.increment2" type="button" :value="store.value2"  />
+    <!-- <div class="cards">
+      <ApiTakeDown />
+    </div> -->
+    <div>
+      <CarouselSlide/>
     </div>
-    <div class="model">
-      <img src="" alt="bild">
-      <h2 >model</h2>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-      <input @click="store.increment3" type="button" :value="store.value3"  />
-      </div>
-    <div class="model">
-      <img src="" alt="bild">
-      <h2 >model</h2>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-      <input @click="store.increment4" type="button" :value="store.value4"  />
-      </div>
-    <div class="model">
-      <img src="" alt="bild">
-      <h2 >model</h2>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-      <input @click="store.increment5" type="button" :value="store.value5"  />
-     </div>
-  </div > -->
-
-</main>
-<div >
-
-<!-- Footer -->
-
-
-</div>
+  </main>
 </template>
 
-
- <style>
-.head{
-  display:flex;
-  height: 80vh;
-  justify-content: space-between; /* Align items with space between them */
-  /*align-items: center; Vertically center items */
-
-
+<style scoped>
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  padding: 0%;
 }
-.button{
-  /* display: flex;
-  justify-content: space-between; */
-
-
-
+h4 {
+  color: #111;
+  font-family: sans-serif;
 }
 
-.model{
-
-  border: solid blue;
-  max-width: 100px;
-  padding: 5px;
-  border-radius: 5px;
-  margin: 5px;
+p {
+  color: #111;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 29px;
+  font-size: larger;
+  display: block;
+}
+.card-intro {
+  display: block;
+  padding-right: 25rem;
+  padding-bottom: 8rem;
+}
+.container {
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+.cards {
+  align-items: center;
+  margin-left: 35px;
 }
 
-
-.foot{
-
-  background-color: blueviolet;
-  height: 20vh;
+.discription {
+  text-align: center;
+  padding: 30px;
 }
 </style>
+ 

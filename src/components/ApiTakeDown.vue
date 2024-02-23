@@ -48,42 +48,6 @@ const value = ref('search')
 
       }
     },
-      // methods:{
-      //   showM(info){
-      //     this.$emit('show', info)
-      //     console.log(info)
-      //   }
-
-      // },
-       methods: {
-      // async searchButton() {
-      //   try {
-      //     const result = await axios.get(`https://api.fbi.gov/wanted/v1/list?title=${this.toUpperCase} `)
-      //     this.wanted = result.data.items
-      //     console.log(result.data.items)
-      //   }catch (error) {
-      //     console.error('Error fetching data:', error)
-      //   }
-      // },
-      // showM(info){
-      //   this.$emit('show', info)
-      //   console.log(info)
-      // },
-
-
-
-      // },
-      // emits:['show'],
-      // computed:{
-      // toUpperCase(){
-
-      //   return this.searchInApi.toUpperCase()
-
-      // }
-      // },
-      // watch:{
-
-       },
       data() {
         return {
           courses :[],

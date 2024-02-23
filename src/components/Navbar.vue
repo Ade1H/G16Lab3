@@ -34,8 +34,8 @@
       </BNavItemDropdown>
     </BNavbarNav>
 
-    <BNavForm class="d-flex">
-      <BFormInput v-model="searchInApi" class="me-2" placeholder="Search" />
+    <BNavForm  class="d-flex">
+      <BFormInput  v-model="searchInApi" class="me-2" placeholder="Search" />
       <BButton variant="outline-warning"  @click="searchResult()">Search</BButton>
     </BNavForm>
 
@@ -60,19 +60,27 @@ import { RouterLink } from 'vue-router';
       return {
 
       // menuText:"Menu",
-       ifMenuClicked:false,
-      }
-    },
-    methods:{
-      menuClick(){
-        console.log("menu clicked "+this.ifMenuClicked)
-        this.ifMenuClicked = !this.ifMenuClicked
-        console.log("menu clicked "+this.ifMenuClicked)
-
-
-        // this.menuText = this.ifMenuClicked ? "X" :"Menu"
+      //  ifMenuClicked:false,
+       searchInApi:''
       }
     }
+    ,
+    methods:{
+    searchResult(){
+      this.$emit('showResult')
+        console.log(this.searchInApi)
+    }
+  }
+    // methods:{
+    //   menuClick(){
+    //     console.log("menu clicked "+this.ifMenuClicked)
+    //     this.ifMenuClicked = !this.ifMenuClicked
+    //     console.log("menu clicked "+this.ifMenuClicked)
+
+
+    //     // this.menuText = this.ifMenuClicked ? "X" :"Menu"
+    //   }
+    // }
   }
 </script>
 
