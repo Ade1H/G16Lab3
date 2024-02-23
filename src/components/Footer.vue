@@ -1,26 +1,12 @@
-
-
-
 <script>
-
 </script>
 <template>
 
-
 <!-- Footer -->
 <footer class="bg-body-tertiary text-center">
-  <!-- Section: Social media -->
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-    <!-- Left -->
-   
-
-    <!-- Left -->
-
-    <!-- Right -->
     <div class="container p-4 pb-0">
-    <!-- Section: Social media -->
     <section class="mb-4">
-      <!-- Facebook -->
       <a
       data-mdb-ripple-init
         class="btn text-white btn-floating m-1"
@@ -30,7 +16,6 @@
         ><i class="fab fa-facebook-f"></i
       ></a>
 
-      <!-- Twitter -->
       <a
         data-mdb-ripple-init
         class="btn text-white btn-floating m-1"
@@ -40,7 +25,6 @@
         ><i class="fab fa-twitter"></i
       ></a>
 
-      <!-- Google -->
       <a
         data-mdb-ripple-init
         class="btn text-white btn-floating m-1"
@@ -50,7 +34,6 @@
         ><i class="fab fa-google"></i
       ></a>
 
-      <!-- Instagram -->
       <a
         data-mdb-ripple-init
         class="btn text-white btn-floating m-1"
@@ -60,7 +43,6 @@
         ><i class="fab fa-instagram"></i
       ></a>
 
-      <!-- Linkedin -->
       <a
         data-mdb-ripple-init
         class="btn text-white btn-floating m-1"
