@@ -25,8 +25,8 @@
       <Login/>
     </BNavbarNav>
 
-    <BNavForm class="d-flex">
-      <BFormInput v-model="searchInApi" class="me-2" placeholder="Search" />
+    <BNavForm  class="d-flex">
+      <BFormInput  v-model="searchInApi" class="me-2" placeholder="Search" />
       <BButton variant="outline-warning"  @click="searchResult()">Search</BButton>
     </BNavForm>
 
@@ -49,6 +49,12 @@ import { RouterLink } from 'vue-router';
   },
     data() {
       return {
+<<<<<<< HEAD
+
+      // menuText:"Menu",
+      //  ifMenuClicked:false,
+       searchInApi:''
+=======
        ifMenuClicked:false,
       }
     },
@@ -57,8 +63,26 @@ import { RouterLink } from 'vue-router';
         console.log("menu clicked "+this.ifMenuClicked)
         this.ifMenuClicked = !this.ifMenuClicked
         console.log("menu clicked "+this.ifMenuClicked)
+>>>>>>> c0f0fbb904e4bcc20e950a60ec018eaf96f07b5f
       }
     }
+    ,
+    methods:{
+    searchResult(){
+      this.$emit('showResult')
+        console.log(this.searchInApi)
+    }
+  }
+    // methods:{
+    //   menuClick(){
+    //     console.log("menu clicked "+this.ifMenuClicked)
+    //     this.ifMenuClicked = !this.ifMenuClicked
+    //     console.log("menu clicked "+this.ifMenuClicked)
+
+
+    //     // this.menuText = this.ifMenuClicked ? "X" :"Menu"
+    //   }
+    // }
   }
 </script>
 

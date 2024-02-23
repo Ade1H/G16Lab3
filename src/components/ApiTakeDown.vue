@@ -28,6 +28,18 @@ export default {
         console.error("Error fetching data:", error);
       }
     },
+<<<<<<< HEAD
+      data() {
+        return {
+          courses :[],
+          searchInApi:'',
+          searchResult:[],
+          // uppercaseInput:''
+        }
+      }
+    }
+
+=======
   },
   data() {
     return {
@@ -38,6 +50,7 @@ export default {
     };
   },
 };
+>>>>>>> c0f0fbb904e4bcc20e950a60ec018eaf96f07b5f
 </script>
 
 <template>
