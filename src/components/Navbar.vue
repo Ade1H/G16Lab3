@@ -58,21 +58,11 @@ import { RouterLink } from 'vue-router';
   },
     data() {
       return {
-<<<<<<< HEAD
+
 
       // menuText:"Menu",
       //  ifMenuClicked:false,
        searchInApi:''
-=======
-       ifMenuClicked:false,
-      }
-    },
-    methods:{
-      menuClick(){
-        console.log("menu clicked "+this.ifMenuClicked)
-        this.ifMenuClicked = !this.ifMenuClicked
-        console.log("menu clicked "+this.ifMenuClicked)
->>>>>>> c0f0fbb904e4bcc20e950a60ec018eaf96f07b5f
       }
     }
     ,
