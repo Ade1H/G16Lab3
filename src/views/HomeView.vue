@@ -1,12 +1,11 @@
 <script>
 import ApiTakeDown from "../components/ApiTakeDown.vue";
-import CarouselSlide from '../components/CarouselSlide.vue';
+
 
 
 export default {
   components: {
-    ApiTakeDown,
-    CarouselSlide
+    ApiTakeDown
   },
 };
 </script>

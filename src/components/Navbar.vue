@@ -10,7 +10,6 @@
   <BCollapse id="nav-collapse" is-nav>
     <BNavbarNav>
       <RouterLink class="nav-link"  to="/">Home</RouterLink>
-      <RouterLink class="nav-link"  to="/contact">Contact</RouterLink>
       <RouterLink class="nav-link"  to="/about">About</RouterLink>
       <RouterLink class="nav-link"  to="/products">Products</RouterLink>
 
