@@ -49,6 +49,7 @@ import { RouterLink } from 'vue-router';
   },
     data() {
       return {
+<<<<<<< HEAD
        ifMenuClicked:false,
       }
     },
@@ -57,6 +58,13 @@ import { RouterLink } from 'vue-router';
         console.log("menu clicked "+this.ifMenuClicked)
         this.ifMenuClicked = !this.ifMenuClicked
         console.log("menu clicked "+this.ifMenuClicked)
+=======
+
+
+      // menuText:"Menu",
+      //  ifMenuClicked:false,
+       searchInApi:''
+>>>>>>> AdelsB
       }
     }
     ,
