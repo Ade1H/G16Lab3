@@ -9,24 +9,13 @@
     <input type="password" required v-model="password">
     <div v-if="passEror" class="error">{{ passEror }}</div>
 
-    <label>Role:</label>
-    <select v-model="role">
-      <option value="designer">Logg in </option>
-      <option value="developer">new user register</option>
-
-    </select>
-
-    <div class="terms" >
-      <input type="checkbox" v-model="terms" required name="" id="">
-      <label>Accept Terms And conditions</label>
-    </div>
     <!-- <p>Email:{{ email }}</p>
     <p>Password:{{ password }}</p>
     <p>Role:{{ role }}</p>
     <p>Terms:{{ terms }}</p> -->
 
     <div class="submit">
-      <button>Logg in/Create acount</button>
+      <button>Sign in</button>
     </div>
   </form>
 </main>

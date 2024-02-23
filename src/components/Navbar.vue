@@ -1,4 +1,3 @@
-
 <template>
 
 
@@ -11,7 +10,6 @@
   <BCollapse id="nav-collapse" is-nav>
     <BNavbarNav>
       <RouterLink class="nav-link"  to="/">Home</RouterLink>
-      <RouterLink class="nav-link"  to="/contact">Contact</RouterLink>
       <RouterLink class="nav-link"  to="/about">About</RouterLink>
       <RouterLink class="nav-link"  to="/products">Products</RouterLink>
 
@@ -24,18 +22,11 @@
         <BDropdownItem href="#">RU</BDropdownItem>
         <BDropdownItem href="#">FA</BDropdownItem>
       </BNavItemDropdown>
-      <BNavItemDropdown right>
-        <!-- Using 'button-content' slot -->
-        <template #button-content>
-          <em>User</em>
-        </template>
-        <BDropdownItem href="#">Profile</BDropdownItem>
-        <BDropdownItem href="#">Sign Out</BDropdownItem>
-      </BNavItemDropdown>
+      <Login/>
     </BNavbarNav>
 
-    <BNavForm class="d-flex">
-      <BFormInput v-model="searchInApi" class="me-2" placeholder="Search" />
+    <BNavForm  class="d-flex">
+      <BFormInput  v-model="searchInApi" class="me-2" placeholder="Search" />
       <BButton variant="outline-warning"  @click="searchResult()">Search</BButton>
     </BNavForm>
 
@@ -46,7 +37,7 @@
 
 
 <script>
-
+import Login from './components/Login.vue'
 import { RouterLink } from 'vue-router';
 
 
@@ -66,8 +57,30 @@ import { RouterLink } from 'vue-router';
         console.log("menu clicked "+this.ifMenuClicked)
         this.ifMenuClicked = !this.ifMenuClicked
         console.log("menu clicked "+this.ifMenuClicked)
+
+
+      // menuText:"Menu",
+      //  ifMenuClicked:false,
+       searchInApi:''
       }
     }
+    ,
+    methods:{
+    searchResult(){
+      this.$emit('showResult')
+        console.log(this.searchInApi)
+    }
+  }
+    // methods:{
+    //   menuClick(){
+    //     console.log("menu clicked "+this.ifMenuClicked)
+    //     this.ifMenuClicked = !this.ifMenuClicked
+    //     console.log("menu clicked "+this.ifMenuClicked)
+
+
+    //     // this.menuText = this.ifMenuClicked ? "X" :"Menu"
+    //   }
+    // }
   }
 </script>
 
