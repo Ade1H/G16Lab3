@@ -37,7 +37,7 @@
 
 
 <script>
-import Login from '../components/Login.vue'
+import Login from './components/Login.vue'
 import { RouterLink } from 'vue-router';
 
 
