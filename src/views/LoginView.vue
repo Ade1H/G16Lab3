@@ -12,6 +12,7 @@ background: linear-gradient(180deg, rgba(42,116,255,1) 0%, rgba(185,248,255,1) 1
 export default {
 
   components: {
+    
 
     FormLogin
 

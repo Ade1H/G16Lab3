@@ -1,8 +1,8 @@
 
 <template>
   <main>
-  <form  @submit.prevent="handleSubmit">
-    <label >Email:</label>
+  <form @submit.prevent="handleSubmit">
+    <label>Email:</label>
     <input type="email" required v-model="email">
 
     <label> Password:</label>
@@ -22,7 +22,7 @@
 </template>
 
 
-<script >
+<script>
   export default{
     data(){
       return{

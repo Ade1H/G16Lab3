@@ -4,14 +4,21 @@
 <BNavbar toggleable="lg" variant="primary" v-b-color-mode="'dark'">
 
 
-  <BNavbarBrand href="#">Eduwill</BNavbarBrand>
+  <BNavbarBrand href="#">
+    <img src="../assets/images/logo.png" alt="" style="max-width: 100px; display: flex; border-radius: 50px;" ref="/#">
+    </BNavbarBrand>
 
   <BNavbarToggle target="nav-collapse" />
   <BCollapse id="nav-collapse" is-nav>
     <BNavbarNav>
-      <RouterLink class="nav-link"  to="/">Home</RouterLink>
-      <RouterLink class="nav-link"  to="/about">About</RouterLink>
-      <RouterLink class="nav-link"  to="/products">Products</RouterLink>
+      <RouterLink class="nav-link" to="/">Home</RouterLink>
+      <RouterLink class="nav-link" to="/about">About</RouterLink>
+      <RouterLink class="nav-link" to="/products">Products</RouterLink>
+      <RouterLink class="nav-link" to="/card">Card</RouterLink>
+      <!-- <button @click="navigateTo()">vewCard/cuntinioShop</button> -->
+
+
+
 
     </BNavbarNav>
     <!-- Right aligned nav items -->
@@ -22,14 +29,14 @@
         <BDropdownItem href="#">RU</BDropdownItem>
         <BDropdownItem href="#">FA</BDropdownItem>
       </BNavItemDropdown>
-      <Login/>
+      <Login />
     </BNavbarNav>
-
+<!--
     <BNavForm  class="d-flex">
       <BFormInput  v-model="searchInApi" class="me-2" placeholder="Search" />
-      <BButton variant="outline-warning"  @click="searchResult()">Search</BButton>
-    </BNavForm>
-
+      <BButton variant="outline-warning"  @click="searchButonPushed()">Search</BButton>
+    </BNavForm> -->
+<!-- <SearchBarVue @showResult="bringInfoForTathQuary" /> -->
   </BCollapse>
 </BNavbar>
 
@@ -37,51 +44,26 @@
 
 
 <script>
-import Login from '../components/Login.vue'
-import { RouterLink } from 'vue-router';
+import { RouterLink } from 'vue-router'
+// import SearchBarVue from './SearchBar.vue'
+
+
 
 
   export default {
 
     components: {
     RouterLink,
+    // SearchBarVue
+
 
   },
-    data() {
-      return {
-       ifMenuClicked:false,
-      }
-    },
-    methods:{
-      menuClick(){
-        console.log("menu clicked "+this.ifMenuClicked)
-        this.ifMenuClicked = !this.ifMenuClicked
-        console.log("menu clicked "+this.ifMenuClicked)
 
 
-      // menuText:"Menu",
-      //  ifMenuClicked:false,
-       searchInApi:''
-      }
-    }
-    ,
-    methods:{
-    searchResult(){
-      this.$emit('showResult')
-        console.log(this.searchInApi)
-    }
   }
-    // methods:{
-    //   menuClick(){
-    //     console.log("menu clicked "+this.ifMenuClicked)
-    //     this.ifMenuClicked = !this.ifMenuClicked
-    //     console.log("menu clicked "+this.ifMenuClicked)
 
 
-    //     // this.menuText = this.ifMenuClicked ? "X" :"Menu"
-    //   }
-    // }
-  }
+
 </script>
 
 
