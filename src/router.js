@@ -1,15 +1,4 @@
-<<<<<<< HEAD
 import { createRouter, createWebHashHistory } from "vue-router";
-=======
-import { createRouter, createWebHashHistory } from 'vue-router'
-
-import AboutView from './views/AboutView.vue'
-import RegisterView from './views/RegisterView.vue'
-import LoginView from './views/LoginView.vue'
-import HomeView from './views/HomeView.vue'
-import Products from './views/Products.vue'
-import ShopingCardView from './views/ShopingCardView.vue'
->>>>>>> 622c337efcccef7ccecf3ad009a36f190298721e
 
 import AboutView from "./views/AboutView.vue";
 import RegisterView from "./views/RegisterView.vue";
@@ -41,7 +30,6 @@ export default createRouter({
     },
     {
       component: Products,
-<<<<<<< HEAD
       path: "/Products",
     },
     {
@@ -59,14 +47,3 @@ export default createRouter({
     },
   ],
 });
-=======
-      path: '/Products'
-    },
-    {
-      component: ShopingCardView,
-      path: '/card'
-    }
-
-  ]
-})
->>>>>>> 622c337efcccef7ccecf3ad009a36f190298721e

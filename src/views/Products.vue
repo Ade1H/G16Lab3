@@ -1,18 +1,9 @@
 <template>
-<<<<<<< HEAD
   <main>
    <!-- <button @click="navigateTo('card','products')">vewCard/cuntinioShop</button> -->
    <!-- <BButton style="margin-bottom: 5px;" variant="outline-warning" @click="navigateTo('card','products')">vewCard/cuntinioShop</BButton> -->
 <div v-if="page === 'products'">
 <ApiTakeDown @addTo="putToCard" @saveCourse="saveProductToView"  />
-=======
-  <main style="background: rgb(42,116,255);
-background: linear-gradient(180deg, rgba(42,116,255,1) 0%, rgba(185,248,255,1) 100%);">
-   <!-- <button @click="navigateTo('card','products')">vewCard/cuntinioShop</button> -->
-   <!-- <BButton style="margin-bottom: 5px;" variant="outline-warning" @click="navigateTo('card','products')">vewCard/cuntinioShop</BButton> -->
-<div v-if="page === 'products'">
-<ApiTakeDown @addTo="putToCard" />
->>>>>>> 622c337efcccef7ccecf3ad009a36f190298721e
 </div>
 <div v-if="page === 'card'">
 <!-- <ShopingCard :cart="card" @remove="removeFromCard" /> -->
@@ -49,7 +40,6 @@ export default {
   // },
   methods: {
     putToCard(course) {
-<<<<<<< HEAD
       const oldCart = JSON.parse(localStorage.getItem("cart"))
       if (oldCart) {
         this.cart = JSON.parse(localStorage.getItem("cart"))
@@ -60,14 +50,6 @@ export default {
     saveProductToView(course) {
       localStorage.setItem('product', JSON.stringify(course));
       this.$router.push('/product');
-=======
-
-
-      this.card.push(course)
-      console.log(this.card)
-      localStorage.setItem('cart', JSON.stringify(this.card));
-
->>>>>>> 622c337efcccef7ccecf3ad009a36f190298721e
     }
     ,
     // removeFromCard(course) {
