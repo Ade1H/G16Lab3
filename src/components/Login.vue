@@ -1,6 +1,7 @@
 
 <template>
 
+<<<<<<< HEAD
   <BNavItemDropdown right>
     <!-- Using 'button-content' slot -->
     <template #button-content>
@@ -15,6 +16,22 @@
       <BDropdownItem href="#"><RouterLink class="nav-link" to="/Register">Sign Out</RouterLink></BDropdownItem>
     </div>
   </BNavItemDropdown>
+=======
+      <BNavItemDropdown right>
+        <!-- Using 'button-content' slot -->
+        <template #button-content>
+          <em>User</em>
+        </template>
+        <div id="LogOut">
+          <BDropdownItem href="#"><RouterLink class="nav-link" to="/Register">Register</RouterLink></BDropdownItem>
+          <BDropdownItem href="#"><RouterLink class="nav-link" to="/Login">Sign In</RouterLink></BDropdownItem>
+        </div>
+        <div id="LogIn">
+          <BDropdownItem href="#"><RouterLink class="nav-link" to="/Register">Profile</RouterLink></BDropdownItem>
+          <BDropdownItem href="#"><RouterLink class="nav-link" to="/Register">Sign Out</RouterLink></BDropdownItem>
+        </div>
+      </BNavItemDropdown>
+>>>>>>> 622c337efcccef7ccecf3ad009a36f190298721e
 </template>
 
 
