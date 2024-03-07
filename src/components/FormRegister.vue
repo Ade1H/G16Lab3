@@ -2,49 +2,63 @@
 <template>
   <main>
   <form  @submit.prevent="handleSubmit">
-    <label >Email:</label>
+    <p >Email:</p>
     <input type="email" required v-model="email">
 
-    <label> Password:</label>
+    <p> Password:</p>
     <input type="password" required v-model="password">
     <div v-if="passEror" class="error">{{ passEror }}</div>
 
     <div class="terms" >
       <input type="checkbox" v-model="terms" required name="" id="">
-      <label>Accept Terms And conditions</label>
+      <p>Accept terms and conditions</p>
     </div>
-    <!-- <p>Email:{{ email }}</p>
-    <p>Password:{{ password }}</p>
-    <p>Role:{{ role }}</p>
-    <p>Terms:{{ terms }}</p> -->
 
     <div class="submit">
-      <button>Create acount</button>
+      <button>Create account</button>
     </div>
   </form>
+
+<p>{{ accountsStore.accounts }}</p>
+
 </main>
 </template>
 
 
 <script >
-  export default{
+  import { mapStores } from 'pinia'
+  import { useAccountsStore } from '../storeUsers'
+
+  export default {
     data(){
       return{
         email: '',
         password:'',
-        role:'choice',
         terms:false,
         passEror:''
       }
 
     },
+    computed: {
+      ...mapStores(useAccountsStore)
+    },
     methods:{
       handleSubmit(){
-        // alert('FORM SUBMITED')
-        if(this.password.length < 5){
-          this.passwordErros='pass is not more than 5 chart'
+        const account = this.accountsStore.accounts.find(
+            (user) => 
+            user.Mail === this.email
+            )
+
+        if(account != null){
+          alert("Användarnamn är upptaget")
+        } else if(this.password.length < 1){
+          this.passwordErros='pass is not more than 1 chart'
           alert(this.passwordErros)
         } else{
+          this.accountsStore.CreateAccounts({
+            Mail: this.email, 
+            Password: this.password
+          })
           alert('FORM SUBMITED')
         }
 
@@ -58,16 +72,13 @@
 <style scoped>
 form{
   width: 420px;
-  /* margin: 30px auto; */
   background: white;
-  /* text-align: left; */
-  /* padding: 100px; */
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
 }
 
-label{
+p{
   color:black;
   display: inline-block;
   margin: 25px 0 15px;

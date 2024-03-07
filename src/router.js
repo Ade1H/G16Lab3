@@ -3,6 +3,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import AboutView from './views/AboutView.vue'
 import RegisterView from './views/RegisterView.vue'
 import LoginView from './views/LoginView.vue'
+import UserView from './views/UserView.vue'
 import HomeView from './views/HomeView.vue'
 import Products from './views/Products.vue'
 
@@ -24,6 +25,10 @@ export default createRouter({
     {
       component: LoginView,
       path: '/Login'
+    },
+    {
+      component: UserView,
+      path: '/User'
     },
     {
       component: HomeView,

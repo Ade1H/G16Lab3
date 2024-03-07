@@ -16,17 +16,14 @@
     </BNavbarNav>
     <!-- Right aligned nav items -->
     <BNavbarNav class="ms-auto mb-2 mb-lg-0">
-      <BNavItemDropdown text="Lang" right>
-        <BDropdownItem href="#">EN</BDropdownItem>
-        <BDropdownItem href="#">ES</BDropdownItem>
-        <BDropdownItem href="#">RU</BDropdownItem>
-        <BDropdownItem href="#">FA</BDropdownItem>
-      </BNavItemDropdown>
-      <Login/>
+          <BDropdownItem href="#" class="LogOrReg"><RouterLink class="nav-link"  to="/Register">Register</RouterLink></BDropdownItem>
+          <BDropdownItem href="#" class="LogOrReg"><RouterLink class="nav-link"  to="/Login">Sign In</RouterLink></BDropdownItem>
+          <BDropdownItem href="#" class="LogoutOrProfile"><RouterLink class="nav-link"  to="/User">Profile</RouterLink></BDropdownItem>
+          <BDropdownItem href="#" class="LogoutOrProfile"><RouterLink class="nav-link"  to="/User">Sign Out</RouterLink></BDropdownItem>
     </BNavbarNav>
 
     <BNavForm  class="d-flex">
-      <BFormInput  v-model="searchInApi" class="me-2" placeholder="Search" />
+      <BFormInput   class="me-2" placeholder="Search" />
       <BButton variant="outline-warning"  @click="searchResult()">Search</BButton>
     </BNavForm>
 
@@ -37,7 +34,6 @@
 
 
 <script>
-import Login from '../components/Login.vue'
 import { RouterLink } from 'vue-router';
 
 

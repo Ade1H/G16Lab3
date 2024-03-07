@@ -1,50 +1,58 @@
 
 <template>
   <main>
-  <form  @submit.prevent="handleSubmit">
-    <label >Email:</label>
+  <form  @submit.prevent="Submit">
+    <p >Email:</p>
     <input type="email" required v-model="email">
 
-    <label> Password:</label>
+    <p> Password:</p>
     <input type="password" required v-model="password">
     <div v-if="passEror" class="error">{{ passEror }}</div>
-
-    <!-- <p>Email:{{ email }}</p>
-    <p>Password:{{ password }}</p>
-    <p>Role:{{ role }}</p>
-    <p>Terms:{{ terms }}</p> -->
 
     <div class="submit">
       <button>Sign in</button>
     </div>
   </form>
+  <p>{{ accountsStore.accounts }}</p>
+  <!-- <p>{{ accountsStore.accounts }}</p> -->
+
+
 </main>
 </template>
 
-
 <script >
+  import { mapStores } from 'pinia'
+  import { useAccountsStore } from '../storeUsers'
+  import { useUserStore } from '../storeUser'
+
   export default{
+    computed: {
+      ...mapStores(useAccountsStore),
+      ...mapStores(useUserStore)
+    },
     data(){
       return{
         email: '',
         password:'',
-        role:'choice',
-        terms:false,
         passEror:''
       }
 
     },
     methods:{
-      handleSubmit(){
-        // alert('FORM SUBMITED')
-        if(this.password.length < 5){
-          this.passwordErros='pass is not more than 5 chart'
-          alert(this.passwordErros)
-        } else{
-          alert('FORM SUBMITED')
+      Submit(){
+          
+        if( this.accountsStore.accounts.find( (user) => user.Mail === this.email && user.Password === this.password ) != null){
+          this.LoginStore.LoginUser({
+            Mail: this.email, 
+            Password: this.password
+          })
+          console.log(localStorage.getItem("user"))
+
+          alert("inloggad som: " + this.email)
+        } 
+        else{
+          alert('Fel användarnamn eller lösenord.')
         }
-
-
       }
     }
   }
@@ -54,16 +62,13 @@
 <style scoped>
 form{
   width: 420px;
-  /* margin: 30px auto; */
   background: white;
-  /* text-align: left; */
-  /* padding: 100px; */
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
 }
 
-label{
+p{
   color:black;
   display: inline-block;
   margin: 25px 0 15px;
