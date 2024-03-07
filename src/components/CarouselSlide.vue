@@ -52,6 +52,7 @@ import axios from 'axios'
   width: 50%;
 }
 h3 {
+  color: white;
   font-family: monospace;
   text-align: center;
   padding-bottom: 12px;

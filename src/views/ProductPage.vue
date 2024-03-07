@@ -61,6 +61,7 @@ export default {
 
 <style scoped>
 .product-page {
+  color: white;
   max-width: 800px;
   margin: 0 auto;
   padding: 32px 32px 46px;

@@ -54,6 +54,7 @@ export default {
 
 <style scoped>
 .ratings-list {
+  color: white;
   display: flex;
   flex-wrap: wrap;
 }
@@ -83,10 +84,11 @@ export default {
 }
 
 h5{
-  color: blueviolet;
+  color: white;
 }
 
 h4{
+color:white;
   padding-left: 25px;
   font-style: italic;
 }
