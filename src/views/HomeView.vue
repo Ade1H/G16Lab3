@@ -1,11 +1,13 @@
 <script>
-import ApiTakeDown from "../components/ApiTakeDown.vue";
+// import ApiTakeDown from "../components/ApiTakeDown.vue";
+import CarouselSlide from "../components/CarouselSlide.vue";
 
 
 
 export default {
   components: {
-    ApiTakeDown
+
+    CarouselSlide
   },
 };
 </script>
@@ -68,7 +70,7 @@ export default {
       <ApiTakeDown />
     </div> -->
     <div>
-      <CarouselSlide/>
+      <CarouselSlide />
     </div>
   </main>
 </template>
@@ -109,5 +111,6 @@ p {
   text-align: center;
   padding: 30px;
 }
+
+
 </style>
- 

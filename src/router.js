@@ -6,7 +6,7 @@ import LoginView from './views/LoginView.vue'
 import UserView from './views/UserView.vue'
 import HomeView from './views/HomeView.vue'
 import Products from './views/Products.vue'
-
+import ShopingCardView from './views/ShopingCardView.vue'
 
 
 export default createRouter({
@@ -37,6 +37,11 @@ export default createRouter({
     {
       component: Products,
       path: '/Products'
+    },
+    {
+      component: ShopingCardView,
+      path: '/card'
     }
+
   ]
 })

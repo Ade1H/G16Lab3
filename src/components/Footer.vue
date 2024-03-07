@@ -1,5 +1,7 @@
 <script>
+
 </script>
+
 <template>
 
 <!-- Footer -->
@@ -23,7 +25,7 @@
         href="#!"
         role="button"
         ><i class="fab fa-twitter"></i
-      ></a>
+        ></a>
 
       <a
         data-mdb-ripple-init
@@ -32,7 +34,7 @@
         href="#!"
         role="button"
         ><i class="fab fa-google"></i
-      ></a>
+></a>
 
       <a
         data-mdb-ripple-init
@@ -80,6 +82,7 @@
             <i class="fas fa-gem me-3"></i>Company name
           </h6>
           <p>
+            <img src="../assets/images/logo.png" alt="" style="max-width: 100px; display: flex; border-radius: 50px;">
             Here you can use rows and columns to organize your footer content. Lorem ipsum
             dolor sit amet, consectetur adipisicing elit.
           </p>

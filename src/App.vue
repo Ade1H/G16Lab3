@@ -18,14 +18,14 @@
   <Navbar />
 
 
-  <main >
+  <main>
     <RouterView />
   </main>
   <Footer />
 </template>
 
 
-<style >
+<style>
 body{
 
   margin: 0;
