@@ -13,16 +13,9 @@ export default {
 </script>
 
 <template>
-  <main
-    style="
-      background: rgb(95, 96, 97);
-      background: linear-gradient(
-        180deg,
-        rgb(253, 254, 254) 0%,
-        rgb(253, 255, 255) 100%
-      );
-    ">
+  <main>
     <div class="container">
+
       <BCarousel controls indicators>
         <BCarouselSlide
           img-src="https://img-c.udemycdn.com/notices/featured_carousel_slide/image/542775ce-985d-4103-8f86-1bfc28afb29d.jpg">
@@ -82,12 +75,12 @@ export default {
   padding: 0%;
 }
 h4 {
-  color: #111;
+  color: white;
   font-family: sans-serif;
 }
 
 p {
-  color: #111;
+  color:white;
   font-family: "Times New Roman", Times, serif;
   line-height: 29px;
   font-size: larger;

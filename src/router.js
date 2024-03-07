@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from "vue-router";
 
 import AboutView from './views/AboutView.vue'
 import RegisterView from './views/RegisterView.vue'
@@ -7,24 +7,27 @@ import UserView from './views/UserView.vue'
 import HomeView from './views/HomeView.vue'
 import Products from './views/Products.vue'
 import ShopingCardView from './views/ShopingCardView.vue'
-
+import ProductPage from "./views/ProductPage.vue"
+import CheckoutView from "./views/CheckoutView.vue"
 
 export default createRouter({
-
-
   history: createWebHashHistory(),
   routes: [
     {
       component: AboutView,
-      path: '/about'
+      path: "/about",
     },
     {
       component: RegisterView,
-      path: '/Register'
+      path: "/Register",
     },
     {
       component: LoginView,
-      path: '/Login'
+      path: "/Login",
+    },
+    {
+      component: UserView,
+      path: '/User'
     },
     {
       component: UserView,
@@ -32,16 +35,24 @@ export default createRouter({
     },
     {
       component: HomeView,
-      path: '/'
+      path: "/",
     },
     {
       component: Products,
-      path: '/Products'
+      path: "/Products",
     },
     {
       component: ShopingCardView,
-      path: '/card'
-    }
-
-  ]
-})
+      path: "/card",
+    },
+    {
+      component: ProductPage,
+      path: "/product",
+    },
+    {
+      name: "checkout",
+      path: "/checkout",
+      component: CheckoutView,
+    },
+  ],
+});

@@ -1,10 +1,9 @@
 <template>
-  <main style="background: rgb(42,116,255);
-background: linear-gradient(180deg, rgba(42,116,255,1) 0%, rgba(185,248,255,1) 100%);">
+  <main>
    <!-- <button @click="navigateTo('card','products')">vewCard/cuntinioShop</button> -->
    <!-- <BButton style="margin-bottom: 5px;" variant="outline-warning" @click="navigateTo('card','products')">vewCard/cuntinioShop</BButton> -->
 <div v-if="page === 'products'">
-<ApiTakeDown @addTo="putToCard" />
+<ApiTakeDown @addTo="putToCard" @saveCourse="saveProductToView"  />
 </div>
 <div v-if="page === 'card'">
 <!-- <ShopingCard :cart="card" @remove="removeFromCard" /> -->
@@ -41,12 +40,16 @@ export default {
   // },
   methods: {
     putToCard(course) {
-
-
+      const oldCart = JSON.parse(localStorage.getItem("cart"))
+      if (oldCart) {
+        this.cart = JSON.parse(localStorage.getItem("cart"))
+      }
       this.card.push(course)
-      console.log(this.card)
       localStorage.setItem('cart', JSON.stringify(this.card));
-
+    },
+    saveProductToView(course) {
+      localStorage.setItem('product', JSON.stringify(course));
+      this.$router.push('/product');
     }
     ,
     // removeFromCard(course) {

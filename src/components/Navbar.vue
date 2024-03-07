@@ -1,21 +1,21 @@
 <template>
 
 
-<BNavbar toggleable="lg" variant="primary" v-b-color-mode="'dark'">
+  <BNavbar toggleable="lg" variant="primary" v-b-color-mode="'dark'">
 
 
-  <BNavbarBrand href="#">
-    <img src="../assets/images/logo.png" alt="" style="max-width: 100px; display: flex; border-radius: 50px;" ref="/#">
-    </BNavbarBrand>
+    <BNavbarBrand href="#">
+      <img src="../assets/images/logo.png" alt="" style="max-width: 100px; display: flex; border-radius: 50px;" ref="/#">
+      </BNavbarBrand>
 
-  <BNavbarToggle target="nav-collapse" />
-  <BCollapse id="nav-collapse" is-nav>
-    <BNavbarNav>
-      <RouterLink class="nav-link" to="/">Home</RouterLink>
-      <RouterLink class="nav-link" to="/about">About</RouterLink>
-      <RouterLink class="nav-link" to="/products">Products</RouterLink>
-      <RouterLink class="nav-link" to="/card">Card</RouterLink>
-      <!-- <button @click="navigateTo()">vewCard/cuntinioShop</button> -->
+    <BNavbarToggle target="nav-collapse" />
+    <BCollapse id="nav-collapse" is-nav>
+      <BNavbarNav>
+        <RouterLink class="nav-link" to="/">Home</RouterLink>
+        <RouterLink class="nav-link" to="/about">About</RouterLink>
+        <RouterLink class="nav-link" to="/products">Products</RouterLink>
+        <RouterLink class="nav-link" to="/card">Card</RouterLink>
+        <!-- <button @click="navigateTo()">vewCard/cuntinioShop</button> -->
 
 
 
@@ -38,7 +38,7 @@
   </BCollapse>
 </BNavbar>
 
-</template>
+  </template>
 
 
 <script>
