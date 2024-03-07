@@ -2,12 +2,9 @@
 // import ApiTakeDown from "../components/ApiTakeDown.vue";
 import CarouselSlide from "../components/CarouselSlide.vue";
 
-
-
 export default {
   components: {
-
-    CarouselSlide
+    CarouselSlide,
   },
 };
 </script>
@@ -15,7 +12,6 @@ export default {
 <template>
   <main>
     <div class="container">
-
       <BCarousel controls indicators>
         <BCarouselSlide
           img-src="https://img-c.udemycdn.com/notices/featured_carousel_slide/image/542775ce-985d-4103-8f86-1bfc28afb29d.jpg">
@@ -59,11 +55,11 @@ export default {
       </p>
       <br />
     </div>
-    <!-- <div class="cards">
-      <ApiTakeDown />
-    </div> -->
     <div>
       <CarouselSlide />
+    </div>
+    <div>
+      <CourseRating />
     </div>
   </main>
 </template>
@@ -80,7 +76,7 @@ h4 {
 }
 
 p {
-  color:white;
+  color: white;
   font-family: "Times New Roman", Times, serif;
   line-height: 29px;
   font-size: larger;
@@ -101,9 +97,9 @@ p {
 }
 
 .discription {
+
   text-align: center;
-  padding: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
-
-
 </style>
