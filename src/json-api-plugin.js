@@ -2,7 +2,7 @@ import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
 
-export  function jsonApiPlugin() {
+export function jsonApiPlugin() {
   return {
     name: 'json-api-plugin',
     configureServer(server) {

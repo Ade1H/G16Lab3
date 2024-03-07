@@ -1,15 +1,15 @@
 
 <template>
   <main>
-  <form  @submit.prevent="handleSubmit">
-    <label >Email:</label>
+  <form @submit.prevent="handleSubmit">
+    <label>Email:</label>
     <input type="email" required v-model="email">
 
     <label> Password:</label>
     <input type="password" required v-model="password">
     <div v-if="passEror" class="error">{{ passEror }}</div>
 
-    <div class="terms" >
+    <div class="terms">
       <input type="checkbox" v-model="terms" required name="" id="">
       <label>Accept Terms And conditions</label>
     </div>
@@ -26,7 +26,7 @@
 </template>
 
 
-<script >
+<script>
   export default{
     data(){
       return{

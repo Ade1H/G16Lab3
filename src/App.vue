@@ -18,14 +18,15 @@
   <Navbar />
 
 
-  <main >
+  <main style="background: rgb(2,0,36);
+background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,121,247,1) 100%);">
     <RouterView />
   </main>
   <Footer />
 </template>
 
 
-<style >
+<style>
 body{
 
   margin: 0;
