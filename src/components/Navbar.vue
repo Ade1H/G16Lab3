@@ -23,10 +23,11 @@
     </BNavbarNav>
     <!-- Right aligned nav items -->
     <BNavbarNav class="ms-auto mb-2 mb-lg-0">
-          <BDropdownItem href="#" class="LogOrReg"><RouterLink class="nav-link"  to="/Register">Register</RouterLink></BDropdownItem>
-          <BDropdownItem href="#" class="LogOrReg"><RouterLink class="nav-link"  to="/Login">Sign In</RouterLink></BDropdownItem>
-          <BDropdownItem href="#" class="LogoutOrProfile"><RouterLink class="nav-link"  to="/User">Profile</RouterLink></BDropdownItem>
-          <BDropdownItem href="#" class="LogoutOrProfile"><RouterLink class="nav-link"  to="/User">Sign Out</RouterLink></BDropdownItem>
+      <BDropdownItem href="#"><RouterLink class="nav-link"  to="/Register">Register</RouterLink></BDropdownItem>
+      <BDropdownItem href="#"><RouterLink class="nav-link"  to="/Login">Sign In</RouterLink></BDropdownItem>
+    
+      <BDropdownItem href="#"><RouterLink class="nav-link"  to="/User">Profile</RouterLink></BDropdownItem>
+      <BDropdownItem href="#"><RouterLink class="nav-link"  to="/" @click="this.LoginStore.LogoutUser()">Sign Out</RouterLink></BDropdownItem>
     </BNavbarNav>
 <!--
     <BNavForm  class="d-flex">
@@ -42,24 +43,18 @@
 
 <script>
 import { RouterLink } from 'vue-router'
+import { mapStores } from 'pinia'
+import { useLoginStore } from '../storeUser'
 // import SearchBarVue from './SearchBar.vue'
-
-
-
-
   export default {
-
+    computed: {
+    ...mapStores(useLoginStore)
+    },
     components: {
     RouterLink,
     // SearchBarVue
-
-
   },
-
-
   }
-
-
 
 </script>
 

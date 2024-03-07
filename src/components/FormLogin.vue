@@ -13,9 +13,6 @@
       <button>Sign in</button>
     </div>
   </form>
-  <p>{{ accountsStore.accounts }}</p>
-  <!-- <p>{{ accountsStore.accounts }}</p> -->
-
 
 </main>
 </template>
@@ -23,12 +20,12 @@
 <script >
   import { mapStores } from 'pinia'
   import { useAccountsStore } from '../storeUsers'
-  import { useUserStore } from '../storeUser'
+  import { useLoginStore } from '../storeUser'
 
   export default{
     computed: {
       ...mapStores(useAccountsStore),
-      ...mapStores(useUserStore)
+      ...mapStores(useLoginStore)
     },
     data(){
       return{
@@ -46,8 +43,6 @@
             Mail: this.email, 
             Password: this.password
           })
-          console.log(localStorage.getItem("user"))
-
           alert("inloggad som: " + this.email)
         } 
         else{

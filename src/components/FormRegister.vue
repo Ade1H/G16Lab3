@@ -9,7 +9,7 @@
     <input type="password" required v-model="password">
     <div v-if="passEror" class="error">{{ passEror }}</div>
 
-    <div class="terms">
+    <div class="terms" >
       <input type="checkbox" v-model="terms" required name="" id="">
       <p>Accept terms and conditions</p>
     </div>
@@ -18,8 +18,6 @@
       <button>Create account</button>
     </div>
   </form>
-
-<p>{{ accountsStore.accounts }}</p>
 
 </main>
 </template>
