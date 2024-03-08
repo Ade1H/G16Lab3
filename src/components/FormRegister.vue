@@ -43,7 +43,7 @@
     methods:{
       handleSubmit(){
         const account = this.accountsStore.accounts.find(
-            (user) => 
+            (user) =>
             user.Mail === this.email
             )
 
@@ -54,7 +54,7 @@
           alert(this.passwordErros)
         } else{
           this.accountsStore.CreateAccounts({
-            Mail: this.email, 
+            Mail: this.email,
             Password: this.password
           })
           alert('FORM SUBMITED')

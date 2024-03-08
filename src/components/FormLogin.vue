@@ -37,14 +37,14 @@
     },
     methods:{
       Submit(){
-          
+
         if( this.accountsStore.accounts.find( (user) => user.Mail === this.email && user.Password === this.password ) != null){
           this.LoginStore.LoginUser({
-            Mail: this.email, 
+            Mail: this.email,
             Password: this.password
           })
           alert("inloggad som: " + this.email)
-        } 
+        }
         else{
           alert('Fel användarnamn eller lösenord.')
         }

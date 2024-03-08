@@ -1,22 +1,15 @@
-import { createApp } from 'vue'
+import { createApp } from "vue";
 
-import { createPinia } from 'pinia'
-import '@fortawesome/fontawesome-free/css/all.css';
+import { createPinia } from "pinia";
+import "@fortawesome/fontawesome-free/css/all.css";
 
+const pinia = createPinia();
 
-// import { Ripple, initMDB, Input } from "mdb-ui-kit";
+import App from "./App.vue";
+import router from "./router";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-vue-next/dist/bootstrap-vue-next.css";
+createApp(App).use(router).use(pinia).mount("#app");
 
-// initMDB({ Ripple,Input, Ripple });
-
-const pinia = createPinia()
-
-// App.use(pinia)
-// import './style.css's
-import App from './App.vue'
-import router from './router'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue-next/dist/bootstrap-vue-next.css'
-createApp(App).use(router).use(pinia).mount('#app')
-
-import piniaPluginPersistedState from 'pinia-plugin-persistedstate'
-pinia.use(piniaPluginPersistedState)
+import piniaPluginPersistedState from "pinia-plugin-persistedstate";
+pinia.use(piniaPluginPersistedState);
