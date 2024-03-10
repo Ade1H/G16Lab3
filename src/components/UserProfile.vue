@@ -2,8 +2,16 @@
 <template>
   <main>
   <div>
-    <p>Email: {{ LoginStore.user[0].Mail }}</p>
-    <p>Password: {{ LoginStore.user[0].Password }}</p>
+    <p v-if="LoggedIn()">Email: {{ LoginStore.user[0].Mail }}</p>
+    <p v-if="LoggedIn()">Password: {{ LoginStore.user[0].Password }}</p>
+    <p v-if="LoggedIn()">Courses:</p>
+    
+    <p v-if="LoginStore.user[0].Courses[0] && LoggedIn()"> {{ LoginStore.user[0].Courses[0].title }}</p>
+    <p v-if="LoginStore.user[0].Courses[1] && LoggedIn()"> {{ LoginStore.user[0].Courses[1].title }}</p>
+    <p v-if="LoginStore.user[0].Courses[2] && LoggedIn()"> {{ LoginStore.user[0].Courses[2].title }}</p>
+    <p v-if="LoginStore.user[0].Courses[3] && LoggedIn()"> {{ LoginStore.user[0].Courses[3].title }}</p>
+    <!-- <p v-for="item in LoginStore.user[0].Courses.length"> {{ LoginStore.user[0].Courses[item - 1].title }}</p> -->
+    
   </div>
 </main>
 </template>
@@ -12,20 +20,20 @@
 <script >
   import { mapStores } from 'pinia'
   import { useLoginStore } from '../storeUser'
-
+  
   export default {
-    data(){
-      return{
-        email: '',
-        password:'',
-        terms:false,
-        passEror:''
-      }
-
-    },
     computed: {
       ...mapStores(useLoginStore)
+    },
+    methods:{
+    LoggedIn(){
+    if (localStorage.getItem("Login") != null){
+      return(localStorage.getItem("Login") != null)
+    }else{
+      this.$router.push('/Login')
     }
+    }
+  }
   }
 
 </script>

@@ -55,9 +55,11 @@
         } else{
           this.accountsStore.CreateAccounts({
             Mail: this.email, 
-            Password: this.password
+            Password: this.password,
+            Courses:[]
           })
           alert('FORM SUBMITED')
+          this.$router.push('/Login')
         }
 
 

@@ -6,7 +6,7 @@ export const useLoginStore = defineStore("Login", {
       this.user.push(Account)
     },
     LogoutUser(){
-      localStorage.removeItem("Login")
+      user = { user: [] }
     }
   },
     persist: true,

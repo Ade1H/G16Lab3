@@ -42,7 +42,15 @@
 </template>
 
 <script>
+  import { mapStores } from 'pinia'
+  import { useAccountsStore } from '../storeUsers'
+  import { useLoginStore } from '../storeUser'
+
 export default {
+  computed: {
+      ...mapStores(useAccountsStore),
+      ...mapStores(useLoginStore)
+    },
   data() {
     return {
       cardNumber: "",
@@ -59,6 +67,8 @@ export default {
         .trim();
     },
     processPayment() {
+      this.accountsStore.accounts.find( (user) => user.Courses = (JSON.parse(localStorage.getItem("cart"))))
+      this.LoginStore.user[0].Courses = (this.accountsStore.accounts.find( (user) => user).Courses)
       alert("Payment processed successfully!");
       this.$router.push({ path: "/" });
     },

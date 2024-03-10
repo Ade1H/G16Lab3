@@ -23,11 +23,11 @@
     </BNavbarNav>
     <!-- Right aligned nav items -->
     <BNavbarNav class="ms-auto mb-2 mb-lg-0">
-      <BDropdownItem href="#"><RouterLink class="nav-link"  to="/Register">Register</RouterLink></BDropdownItem>
-      <BDropdownItem href="#"><RouterLink class="nav-link"  to="/Login">Sign In</RouterLink></BDropdownItem>
+      <BDropdownItem href="#" v-if="!(LoggedIn())"><RouterLink class="nav-link"  to="/Register">Register</RouterLink></BDropdownItem>
+      <BDropdownItem href="#" v-if="!(LoggedIn())"><RouterLink class="nav-link"  to="/Login">Sign In</RouterLink></BDropdownItem>
     
-      <BDropdownItem href="#"><RouterLink class="nav-link"  to="/User">Profile</RouterLink></BDropdownItem>
-      <BDropdownItem href="#"><RouterLink class="nav-link"  to="/" @click="this.LoginStore.LogoutUser()">Sign Out</RouterLink></BDropdownItem>
+      <BDropdownItem href="#" v-if="LoggedIn()"><RouterLink class="nav-link"  to="/User">Profile</RouterLink></BDropdownItem>
+      <BDropdownItem href="#" v-if="LoggedIn()"><RouterLink class="nav-link"  to="/" @click="LogoutUser()">Sign Out</RouterLink></BDropdownItem>
     </BNavbarNav>
 <!--
     <BNavForm  class="d-flex">
@@ -54,6 +54,20 @@ import { useLoginStore } from '../storeUser'
     RouterLink,
     // SearchBarVue
   },
+  data(){
+      return{
+        LoginVar:false
+      }
+    },
+    methods:{
+    LoggedIn(){
+      return(localStorage.getItem("Login") != null)
+    },
+    LogoutUser(){
+      localStorage.removeItem("Login")
+      window.setTimeout(location.reload(), 1)
+    }
+  }
   }
 
 </script>

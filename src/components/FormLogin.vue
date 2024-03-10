@@ -31,19 +31,34 @@
       return{
         email: '',
         password:'',
-        passEror:''
+        passEror:'',
+        LoggedIn:true
       }
 
     },
     methods:{
       Submit(){
+        if(localStorage.getItem("Login") === null){
+          this.LoggedIn = false
+        } 
+        else {
+          this.LoggedIn = true
+        }
+
+        if( this.accountsStore.accounts.find( (user) => user.Mail === this.email && user.Password === this.password ) != null
+        && this.LoggedIn === false){
           
-        if( this.accountsStore.accounts.find( (user) => user.Mail === this.email && user.Password === this.password ) != null){
           this.LoginStore.LoginUser({
             Mail: this.email, 
-            Password: this.password
+            Password: this.password,
+            Courses: (this.accountsStore.accounts.find( (user) => user.Mail === this.email))
           })
+          window.setTimeout(location.reload(), 1)
+          this.$router.push('/')
           alert("inloggad som: " + this.email)
+        } 
+        else if(this.LoggedIn === true){
+          alert("you are already logged in")
         } 
         else{
           alert('Fel användarnamn eller lösenord.')
