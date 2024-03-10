@@ -1,5 +1,4 @@
 <script>
-// import ApiTakeDown from "../components/ApiTakeDown.vue";
 import CarouselSlide from "../components/CarouselSlide.vue";
 
 export default {
@@ -71,12 +70,12 @@ export default {
   padding: 0%;
 }
 h4 {
-  color: white;
+  color: #000;
   font-family: sans-serif;
 }
 
 p {
-  color: white;
+  color: #000;
   font-family: "Times New Roman", Times, serif;
   line-height: 29px;
   font-size: larger;
@@ -97,7 +96,7 @@ p {
 }
 
 .discription {
-
+  color: white;
   text-align: center;
   padding-left: 50px;
   padding-right: 50px;

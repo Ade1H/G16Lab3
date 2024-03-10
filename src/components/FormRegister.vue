@@ -43,7 +43,7 @@
     methods:{
       handleSubmit(){
         const account = this.accountsStore.accounts.find(
-            (user) => 
+            (user) =>
             user.Mail === this.email
             )
 

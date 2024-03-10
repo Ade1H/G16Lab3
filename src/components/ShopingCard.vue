@@ -23,7 +23,7 @@
 
     <div class="cart-total" v-if="cart.length > 0">
       <p>
-        Total: <span class="total">$ {{ total }}</span>
+        Total: <span class="total">$ {{ parseInt(total).toFixed(2) }}</span>
       </p>
       <button @click="checkout" class="checkout-btn">Checkout</button>
     </div>
@@ -166,36 +166,3 @@ export default {
   background-color: #0056b3;
 }
 </style>
-
-<!--
-<script>
- export default {
-props: {
-  corseInfo: {
-        type: String,
-        required: true
-
-      }
-    }
-  }
-</script>
-
-
-<template>
- <div class="shopping-cart">
-    <h2>Card</h2>
-    <ul v-for="course in corseInfo">
-      <p>{{corseInfo}}</p>
-        Individual item elements will be added dynamically using JavaScript
-    </ul>
-    <div class="cart-total">
-        Total: <span id="total-price">$0.00</span>
-    </div>
-    <button id="checkout-btn">Proceed to Checkout</button>
-</div>
-
-</template>
-
-<style>
-
-</style> -->

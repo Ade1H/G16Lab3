@@ -1,7 +1,7 @@
 <template>
-  <hr>
-  <h4>Cours Reviews </h4>
-  <hr>
+  <hr />
+  <h4>Cours Reviews</h4>
+  <hr />
   <div class="ratings-list">
     <div v-for="(rating, index) in ratings" :key="index" class="rating-card">
       <h3>{{ rating.customerName }}</h3>
@@ -83,17 +83,17 @@ export default {
   margin-top: 0;
 }
 
-h5{
+h5 {
   color: white;
 }
 
-h4{
-color:white;
+h4 {
+  color: white;
   padding-left: 25px;
   font-style: italic;
 }
 
-hr{
+hr {
   border: 2px dotted rgb(21, 22, 21);
 }
 </style>

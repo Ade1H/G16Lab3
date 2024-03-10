@@ -48,12 +48,15 @@ export default {
   },
   methods: {
     addToCart(course) {
-      const oldCart = JSON.parse(localStorage.getItem("cart"))
+      const cartCount = localStorage.getItem("cartCount") ?? 0;
+      const oldCart = JSON.parse(localStorage.getItem("cart"));
       if (oldCart) {
-        this.cart = JSON.parse(localStorage.getItem("cart"))
+        this.cart = JSON.parse(localStorage.getItem("cart"));
       }
       this.cart.push(course);
       localStorage.setItem("cart", JSON.stringify(this.cart));
+      localStorage.setItem("cartCount", parseInt(cartCount) + 1);
+      location.reload();
     },
   },
 };

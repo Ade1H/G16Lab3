@@ -4,16 +4,12 @@
   </main>
 </template>
 
-
 <script>
-  import FormRegister from '../components/FormRegister.vue'
+import FormRegister from "../components/FormRegister.vue";
 
 export default {
-
   components: {
-
-    FormRegister
-
-  }
-}
+    FormRegister,
+  },
+};
 </script>

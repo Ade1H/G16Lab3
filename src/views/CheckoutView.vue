@@ -3,6 +3,20 @@
     <h1>Checkout</h1>
 
     <div class="payment-form">
+      <label for="card-number">Full Name:</label>
+      <input
+        type="text"
+        id="name"
+        v-model="name"
+        placeholder="your full name"
+      />
+      <label for="card-number">Email Address:</label>
+      <input
+        type="text"
+        id="email"
+        v-model="email"
+        placeholder="example@email.com"
+      />
       <label for="card-number">Card Number:</label>
       <input
         type="text"
@@ -36,7 +50,7 @@
         </div>
       </div>
 
-      <button @click="processPayment" class="pay-btn">Pay ${{ total }}</button>
+      <button @click="processPayment" class="pay-btn">Pay ${{ parseInt(total).toFixed(2) }}</button>
     </div>
   </div>
 </template>
@@ -70,6 +84,7 @@ export default {
       this.accountsStore.accounts.find( (user) => user.Courses = (JSON.parse(localStorage.getItem("cart"))))
       this.LoginStore.user[0].Courses = (this.accountsStore.accounts.find( (user) => user).Courses)
       alert("Payment processed successfully!");
+      localStorage.clear()
       this.$router.push({ path: "/" });
     },
   },
